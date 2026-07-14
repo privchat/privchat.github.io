@@ -1,21 +1,16 @@
 import {
+  ArrowRight,
   Globe2,
-  KeyRound,
   Layers3,
   MessageSquareText,
   MonitorSmartphone,
   Palette,
-  QrCode,
-  RefreshCcw,
   Smartphone,
   TabletSmartphone,
-  UserPlus,
   UserRoundCog,
-  Users,
-  Wallet,
 } from "lucide-react";
+import { RoutedLink } from "../router";
 import {
-  CapabilityGrid,
   FeatureCard,
   PageCta,
   PageHero,
@@ -25,17 +20,6 @@ import {
 import { useT } from "../i18n";
 
 const PLATFORM_ICONS = [Smartphone, Globe2, TabletSmartphone, MonitorSmartphone];
-
-const CAPABILITY_ICONS = [
-  MessageSquareText,
-  Users,
-  UserPlus,
-  Wallet,
-  KeyRound,
-  RefreshCcw,
-  QrCode,
-  Palette,
-];
 
 const T = {
   en: {
@@ -73,41 +57,8 @@ const T = {
     capabilities: {
       eyebrow: "What's inside",
       title: "Not a demo — a shippable feature surface.",
-      body: "Listed against the native mobile baseline, all shipped. H5, Mini Program, and PC web track the same backbone within each platform's capabilities.",
-      groups: [
-        {
-          title: "Messaging",
-          tags: ["Text / image / voice / video / file", "Reply quoting", "Forwarding", "2-minute revoke", "Media preview"],
-        },
-        {
-          title: "Groups",
-          tags: ["Create & manage members", "Join approval", "Invite flows", "Group name & settings", "Mute", "Nine-grid group avatars"],
-        },
-        {
-          title: "Friends & search",
-          tags: ["Find by UID / username", "Requests & verification", "Aliases", "Stranger profiles", "Global search", "Online presence"],
-        },
-        {
-          title: "Wallet & money",
-          tags: ["Red packets", "Transfers", "Money message cards", "Transaction history", "Bank cards & withdrawal", "Sign-in rewards"],
-        },
-        {
-          title: "Account & login",
-          tags: ["SMS code / password login", "Invite-code registration", "Guided profile completion", "Multi-account switching", "Profile editing"],
-        },
-        {
-          title: "Sync & reliability",
-          tags: ["Cloud message history", "Offline catch-up", "Auto-reconnect", "Consistent across devices"],
-        },
-        {
-          title: "QR codes",
-          tags: ["Personal QR card", "Group QR", "Scan to add or join", "Protocol deep links"],
-        },
-        {
-          title: "Personalization",
-          tags: ["Themes & appearance", "Notification settings", "Multilingual UI", "Local avatar cache"],
-        },
-      ],
+      body: "Messaging, groups, wallet, QR, and personalization — the full feature list is maintained in one place, on the chat page. This page is about how the apps are delivered.",
+      link: "See the full feature list",
     },
     whitelabel: {
       eyebrow: "White-label",
@@ -170,41 +121,8 @@ const T = {
     capabilities: {
       eyebrow: "功能全景",
       title: "不是 demo，是能直接上架的功能面。",
-      body: "以移动端为基准列出已落地的功能；H5、小程序与 PC Web 在各端能力范围内对齐同一套底座。",
-      groups: [
-        {
-          title: "消息与聊天",
-          tags: ["文本 / 图片 / 语音 / 视频 / 文件", "回复引用", "消息转发", "2 分钟撤回", "媒体预览"],
-        },
-        {
-          title: "群组",
-          tags: ["建群与成员管理", "入群审批", "邀请入群", "群名与群设置", "禁言", "群头像九宫格"],
-        },
-        {
-          title: "好友与搜索",
-          tags: ["UID / 用户名搜索", "好友申请与验证", "备注名", "陌生人资料页", "全局搜索", "在线状态"],
-        },
-        {
-          title: "钱包与资金",
-          tags: ["红包", "转账", "资金卡片消息", "账单明细", "银行卡与提现", "签到奖励"],
-        },
-        {
-          title: "帐号与登录",
-          tags: ["短信验证码 / 账号密码", "邀请码注册", "资料补全引导", "多账号切换", "资料编辑"],
-        },
-        {
-          title: "同步与可靠性",
-          tags: ["云端聊天记录", "离线消息补拉", "断线自动重连", "多端一致"],
-        },
-        {
-          title: "二维码",
-          tags: ["二维码名片", "群二维码", "扫一扫加好友 / 进群", "协议深链"],
-        },
-        {
-          title: "个性化",
-          tags: ["主题外观", "通知设置", "多语言界面", "头像本地缓存"],
-        },
-      ],
+      body: "消息、群组、钱包、二维码与个性化 — 完整功能清单只维护一份，就在聊天场景页。本页专注讲这套 App 怎么交付。",
+      link: "查看完整功能清单",
     },
     whitelabel: {
       eyebrow: "白标定制",
@@ -267,41 +185,8 @@ const T = {
     capabilities: {
       eyebrow: "功能全景",
       title: "不是 demo，是能直接上架的功能面。",
-      body: "以行動端為基準列出已落地的功能；H5、小程式與 PC Web 在各端能力範圍內對齊同一套底座。",
-      groups: [
-        {
-          title: "訊息與聊天",
-          tags: ["文字 / 圖片 / 語音 / 影片 / 檔案", "回覆引用", "訊息轉發", "2 分鐘撤回", "媒體預覽"],
-        },
-        {
-          title: "群組",
-          tags: ["建群與成員管理", "入群審批", "邀請入群", "群名與群組設定", "禁言", "群頭像九宮格"],
-        },
-        {
-          title: "好友與搜尋",
-          tags: ["UID / 使用者名稱搜尋", "好友申請與驗證", "備註名", "陌生人資料頁", "全域搜尋", "在線狀態"],
-        },
-        {
-          title: "錢包與資金",
-          tags: ["紅包", "轉帳", "資金卡片訊息", "帳單明細", "銀行卡與提領", "簽到獎勵"],
-        },
-        {
-          title: "帳號與登入",
-          tags: ["簡訊驗證碼 / 帳號密碼", "邀請碼註冊", "資料補全引導", "多帳號切換", "資料編輯"],
-        },
-        {
-          title: "同步與可靠性",
-          tags: ["雲端聊天記錄", "離線訊息補拉", "斷線自動重連", "多端一致"],
-        },
-        {
-          title: "QR Code",
-          tags: ["QR Code 名片", "群 QR Code", "掃一掃加好友 / 進群", "協定深連結"],
-        },
-        {
-          title: "個人化",
-          tags: ["主題外觀", "通知設定", "多語言介面", "頭像本地快取"],
-        },
-      ],
+      body: "訊息、群組、錢包、QR Code 與個人化 — 完整功能清單只維護一份，就在聊天場景頁。本頁專注講這套 App 怎麼交付。",
+      link: "查看完整功能清單",
     },
     whitelabel: {
       eyebrow: "白牌客製",
@@ -372,7 +257,13 @@ export function AppPage() {
           </div>
           <p>{t.capabilities.body}</p>
         </div>
-        <CapabilityGrid groups={t.capabilities.groups} icons={CAPABILITY_ICONS} />
+        <div className="container board-cta">
+          <RoutedLink className="button button-secondary" href="/chat/">
+            <MessageSquareText size={18} />
+            {t.capabilities.link}
+            <ArrowRight size={16} />
+          </RoutedLink>
+        </div>
       </section>
 
       <section className="section">

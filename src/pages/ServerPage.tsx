@@ -1,7 +1,7 @@
 import {
+  ArrowRight,
   BellRing,
   Boxes,
-  CheckCheck,
   Code2,
   Cpu,
   Database,
@@ -10,21 +10,17 @@ import {
   FolderUp,
   Gauge,
   History,
-  Inbox,
-  KeyRound,
   Layers3,
   Lock,
   LockKeyhole,
   MessageSquareText,
-  RefreshCcw,
   Rocket,
   Server,
   ShieldAlert,
   ShieldCheck,
-  UserPlus,
-  Users,
   Zap,
 } from "lucide-react";
+import { RoutedLink } from "../router";
 import {
   ArchitectureDiagram,
   CapabilityGrid,
@@ -38,18 +34,7 @@ import { useT } from "../i18n";
 
 const ADVANTAGE_ICONS = [Cpu, Zap, Boxes, Lock, ShieldCheck, Server];
 
-const CAPABILITY_ICONS = [
-  MessageSquareText,
-  Users,
-  UserPlus,
-  Inbox,
-  RefreshCcw,
-  CheckCheck,
-  KeyRound,
-  FolderUp,
-  BellRing,
-  Gauge,
-];
+const OPERATIONS_ICONS = [Gauge, BellRing, FolderUp, Server];
 
 const SECURITY_ICONS = [LockKeyhole, Fingerprint, History, ShieldAlert, EyeOff, Database];
 
@@ -94,50 +79,27 @@ const T = {
         },
       ],
     },
-    capabilities: {
-      eyebrow: "What's inside",
-      title: "A complete IM surface, out of the box.",
-      body: "Grouped by module, everything below is implemented in the open-source server itself — matching the repository README. Commercial capabilities like wallets and red packets live in the Platform layer.",
+    operations: {
+      eyebrow: "Ready to operate",
+      title: "Built for day two, not just day one.",
+      body: "Observability, push, storage, and deployment — the infrastructure it takes to actually run an IM service. The full user-facing feature list lives on the chat page.",
+      link: "See the full IM feature list",
       groups: [
         {
-          title: "Messaging",
-          tags: ["Text & rich media", "@mentions", "Replies", "Reactions", "2-minute revoke", "Dedup on both ends"],
+          title: "Ops & observability",
+          tags: ["Prometheus /metrics", "Health checks", "Admin service API", "Embedded migrations", "Graceful shutdown"],
         },
         {
-          title: "Groups",
-          tags: ["Create & manage members", "Roles & permissions", "Ownership transfer", "Mute one or all", "QR join", "Join approval"],
+          title: "Offline push pipeline",
+          tags: ["Planner/worker orchestration", "APNS / FCM / Huawei HMS", "Xiaomi / OPPO / vivo / Honor & more"],
         },
         {
-          title: "Friends & privacy",
-          tags: ["Requests & approval", "Aliases", "Blacklist", "Non-friend message control", "User & QR search", "Privacy & source checks"],
+          title: "Files & storage",
+          tags: ["Local + S3-compatible backends", "OSS / COS / MinIO / Garage", "Powered by OpenDAL", "Upload tokens & validation"],
         },
         {
-          title: "Conversations",
-          tags: ["Unified channel model", "Auto-creation", "Pin", "Hide", "Mute", "Entity sync"],
-        },
-        {
-          title: "Multi-device sync",
-          tags: ["Telegram-style pts sync", "Idempotency", "Gap detection", "Commit log", "Offline queue", "Catch-up on reconnect"],
-        },
-        {
-          title: "Read state & presence",
-          tags: ["Read receipts", "Unread counts", "Read lists & stats", "Presence subscriptions", "Batch queries", "Typing (rate-limited)"],
-        },
-        {
-          title: "Auth & devices",
-          tags: ["JWT (RS256 + JWKS)", "Refresh tokens", "Unified service token API", "Multi-device sessions", "Device manage & kick", "QR login"],
-        },
-        {
-          title: "Files & media",
-          tags: ["Upload tokens & validation", "HTTP upload/download", "Local + S3-compatible backends", "OSS / COS / MinIO / Garage", "Thumbnails (SDK)", "Powered by OpenDAL"],
-        },
-        {
-          title: "Notifications & push",
-          tags: ["Friend & group event notices", "System notifications", "Push planner/worker", "APNS / FCM / Huawei HMS", "Xiaomi / OPPO / vivo / Honor & more"],
-        },
-        {
-          title: "Ops & integration",
-          tags: ["Prometheus /metrics", "Health checks", "Admin service API", "Server-event dispatch", "Embedded migrations", "Graceful shutdown & Docker"],
+          title: "Deployment shape",
+          tags: ["One static binary", "Docker / Compose", "PostgreSQL + Redis", "Config: TOML + env vars"],
         },
       ],
     },
@@ -224,50 +186,27 @@ const T = {
         },
       ],
     },
-    capabilities: {
-      eyebrow: "功能全景",
-      title: "开箱即有的完整 IM 功能面。",
-      body: "以下能力按模块列出，全部实现于开源服务端本体 — 与仓库 README 的功能清单一致；红包、钱包等商业能力属于 Platform 层。",
+    operations: {
+      eyebrow: "运营就绪",
+      title: "不只为上线那天，更为上线之后。",
+      body: "观测、推送、存储与部署 — 真正运营一个 IM 服务所需的基础设施能力。完整的用户侧功能清单在聊天场景页。",
+      link: "查看完整 IM 功能清单",
       groups: [
         {
-          title: "消息",
-          tags: ["文本与富媒体", "@提及", "回复引用", "表情回应", "2 分钟撤回", "双端去重"],
+          title: "运维与观测",
+          tags: ["Prometheus /metrics", "健康检查", "Admin Service API", "内嵌 migrations", "优雅停机"],
         },
         {
-          title: "群组",
-          tags: ["建群与成员管理", "角色与权限", "群主转让", "单人/全员禁言", "二维码入群", "入群审批"],
+          title: "离线推送管道",
+          tags: ["planner/worker 编排", "APNS / FCM / 华为 HMS", "小米 / OPPO / vivo / 荣耀 等"],
         },
         {
-          title: "好友与隐私",
-          tags: ["申请与验证", "备注名", "黑名单", "非好友消息管控", "用户与二维码搜索", "隐私设置与来源验证"],
+          title: "文件与存储",
+          tags: ["本地 + S3 兼容多后端", "OSS / COS / MinIO / Garage", "OpenDAL 驱动", "上传 token 与校验"],
         },
         {
-          title: "会话",
-          tags: ["统一 Channel 模型", "自动创建", "置顶", "隐藏", "免打扰", "实体同步"],
-        },
-        {
-          title: "多端同步",
-          tags: ["Telegram 式 pts 同步", "幂等与去重", "缺口检测", "Commit Log", "离线队列", "断线补拉"],
-        },
-        {
-          title: "已读与状态",
-          tags: ["已读回执", "未读计数", "已读列表与统计", "在线状态订阅", "批量查询", "输入中（服务端限频）"],
-        },
-        {
-          title: "认证与设备",
-          tags: ["JWT（RS256 + JWKS）", "Refresh token", "统一服务 token API", "多设备会话", "设备管理与踢下线", "扫码登录"],
-        },
-        {
-          title: "文件与媒体",
-          tags: ["上传 token 与校验", "HTTP 上传下载", "本地 + S3 兼容多后端", "OSS / COS / MinIO / Garage", "缩略图（SDK）", "OpenDAL 驱动"],
-        },
-        {
-          title: "通知与推送",
-          tags: ["好友/群事件通知", "系统通知", "推送编排 planner/worker", "APNS / FCM / 华为 HMS", "小米 / OPPO / vivo / 荣耀 等"],
-        },
-        {
-          title: "运维与集成",
-          tags: ["Prometheus /metrics", "健康检查", "Admin Service API", "server-event 分发", "内嵌 migrations", "优雅停机与 Docker"],
+          title: "部署形态",
+          tags: ["单个静态二进制", "Docker / Compose", "PostgreSQL + Redis", "配置：TOML + 环境变量"],
         },
       ],
     },
@@ -354,50 +293,27 @@ const T = {
         },
       ],
     },
-    capabilities: {
-      eyebrow: "功能全景",
-      title: "開箱即有的完整 IM 功能面。",
-      body: "以下能力按模組列出，全部實作於開源伺服器本體 — 與儲存庫 README 的功能清單一致；紅包、錢包等商業能力屬於 Platform 層。",
+    operations: {
+      eyebrow: "營運就緒",
+      title: "不只為上線那天，更為上線之後。",
+      body: "觀測、推送、儲存與部署 — 真正營運一個 IM 服務所需的基礎設施能力。完整的使用者側功能清單在聊天場景頁。",
+      link: "查看完整 IM 功能清單",
       groups: [
         {
-          title: "訊息",
-          tags: ["文字與富媒體", "@提及", "回覆引用", "表情回應", "2 分鐘撤回", "雙端去重"],
+          title: "維運與觀測",
+          tags: ["Prometheus /metrics", "健康檢查", "Admin Service API", "內嵌 migrations", "優雅停機"],
         },
         {
-          title: "群組",
-          tags: ["建群與成員管理", "角色與權限", "群主轉讓", "單人/全員禁言", "QR Code 入群", "入群審批"],
+          title: "離線推送管道",
+          tags: ["planner/worker 編排", "APNS / FCM / 華為 HMS", "小米 / OPPO / vivo / 榮耀 等"],
         },
         {
-          title: "好友與隱私",
-          tags: ["申請與驗證", "備註名", "黑名單", "非好友訊息管控", "使用者與 QR Code 搜尋", "隱私設定與來源驗證"],
+          title: "檔案與儲存",
+          tags: ["本地 + S3 相容多後端", "OSS / COS / MinIO / Garage", "OpenDAL 驅動", "上傳 token 與校驗"],
         },
         {
-          title: "對話",
-          tags: ["統一 Channel 模型", "自動建立", "置頂", "隱藏", "免打擾", "實體同步"],
-        },
-        {
-          title: "多裝置同步",
-          tags: ["Telegram 式 pts 同步", "冪等與去重", "缺口偵測", "Commit Log", "離線佇列", "斷線補拉"],
-        },
-        {
-          title: "已讀與狀態",
-          tags: ["已讀回執", "未讀計數", "已讀列表與統計", "在線狀態訂閱", "批次查詢", "輸入中（伺服器端限頻）"],
-        },
-        {
-          title: "認證與裝置",
-          tags: ["JWT（RS256 + JWKS）", "Refresh token", "統一服務 token API", "多裝置連線", "裝置管理與踢下線", "掃碼登入"],
-        },
-        {
-          title: "檔案與媒體",
-          tags: ["上傳 token 與校驗", "HTTP 上傳下載", "本地 + S3 相容多後端", "OSS / COS / MinIO / Garage", "縮圖（SDK）", "OpenDAL 驅動"],
-        },
-        {
-          title: "通知與推送",
-          tags: ["好友/群組事件通知", "系統通知", "推送編排 planner/worker", "APNS / FCM / 華為 HMS", "小米 / OPPO / vivo / 榮耀 等"],
-        },
-        {
-          title: "維運與整合",
-          tags: ["Prometheus /metrics", "健康檢查", "Admin Service API", "server-event 分發", "內嵌 migrations", "優雅停機與 Docker"],
+          title: "部署形態",
+          tags: ["單個靜態二進位", "Docker / Compose", "PostgreSQL + Redis", "設定：TOML + 環境變數"],
         },
       ],
     },
@@ -479,12 +395,19 @@ export function ServerPage() {
       <section className="section section-deep">
         <div className="container split-heading">
           <div>
-            <SectionEyebrow>{t.capabilities.eyebrow}</SectionEyebrow>
-            <h2>{t.capabilities.title}</h2>
+            <SectionEyebrow>{t.operations.eyebrow}</SectionEyebrow>
+            <h2>{t.operations.title}</h2>
           </div>
-          <p>{t.capabilities.body}</p>
+          <p>{t.operations.body}</p>
         </div>
-        <CapabilityGrid groups={t.capabilities.groups} icons={CAPABILITY_ICONS} />
+        <CapabilityGrid groups={t.operations.groups} icons={OPERATIONS_ICONS} />
+        <div className="container board-cta" style={{ marginTop: 28 }}>
+          <RoutedLink className="button button-secondary" href="/chat/">
+            <MessageSquareText size={18} />
+            {t.operations.link}
+            <ArrowRight size={16} />
+          </RoutedLink>
+        </div>
       </section>
 
       <section className="section">

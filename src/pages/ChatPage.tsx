@@ -1,15 +1,28 @@
 import {
   ArrowRight,
+  BellRing,
+  CheckCheck,
   Code2,
+  FolderUp,
+  Inbox,
+  KeyRound,
   Layers3,
+  MessageSquareText,
   MessagesSquare,
+  Palette,
+  QrCode,
+  RefreshCcw,
   Rocket,
   Server,
   Smartphone,
+  UserPlus,
+  Users,
+  Wallet,
 } from "lucide-react";
 import { RoutedLink, type Route } from "../router";
 import {
   ArchitectureDiagram,
+  CapabilityGrid,
   FeatureCard,
   PageCta,
   PageHero,
@@ -20,6 +33,21 @@ import { useT } from "../i18n";
 
 const PART_ICONS = [Server, Code2, Smartphone, Layers3];
 const PATH_LINKS: Route[] = ["/sdk/", "/app/", "/platform/"];
+
+const CAPABILITY_ICONS = [
+  MessageSquareText,
+  Users,
+  UserPlus,
+  Inbox,
+  RefreshCcw,
+  CheckCheck,
+  KeyRound,
+  FolderUp,
+  BellRing,
+  QrCode,
+  Palette,
+  Wallet,
+];
 
 const T = {
   en: {
@@ -59,10 +87,65 @@ const T = {
         },
       ],
     },
+    capabilities: {
+      eyebrow: "The full feature surface",
+      title: "Everything the chat scenario ships with.",
+      body: "This is the single authoritative feature list for the whole line: messaging, groups, and sync come from the open-source server; media, QR, and personalization from the app family; the commercial extensions ship with the Platform.",
+      groups: [
+        {
+          title: "Messaging",
+          tags: ["Text & rich media", "@mentions", "Reply quoting", "Forwarding", "Reactions", "2-minute revoke", "Media preview", "Dedup on both ends"],
+        },
+        {
+          title: "Groups",
+          tags: ["Create & manage members", "Roles & permissions", "Ownership transfer", "Mute one or all", "QR join", "Join approval", "Nine-grid group avatars"],
+        },
+        {
+          title: "Friends & privacy",
+          tags: ["Find by UID / username", "Requests & verification", "Aliases", "Blacklist", "Non-friend message control", "Privacy & source checks"],
+        },
+        {
+          title: "Conversations",
+          tags: ["Unified channel model", "Auto-creation", "Pin", "Hide", "Mute", "Entity sync"],
+        },
+        {
+          title: "Multi-device sync",
+          tags: ["Telegram-style pts sync", "Idempotency", "Gap detection", "Offline queue", "Catch-up on reconnect", "Cloud message history"],
+        },
+        {
+          title: "Read state & presence",
+          tags: ["Read receipts", "Unread counts", "Read lists & stats", "Online presence", "Typing (rate-limited)"],
+        },
+        {
+          title: "Account & devices",
+          tags: ["SMS code / password login", "Invite-code registration", "Multi-account switching", "QR login", "Device manage & kick", "Guided profile completion"],
+        },
+        {
+          title: "Files & media",
+          tags: ["Upload tokens & validation", "HTTP upload/download", "Local + S3-compatible backends", "Thumbnails (SDK)"],
+        },
+        {
+          title: "Notifications & push",
+          tags: ["Friend & group event notices", "System notifications", "APNS / FCM / Huawei HMS", "Xiaomi / OPPO / vivo / Honor & more"],
+        },
+        {
+          title: "QR codes & sharing",
+          tags: ["Personal QR card", "Group QR", "Scan to add or join", "Protocol deep links"],
+        },
+        {
+          title: "Personalization",
+          tags: ["Themes & appearance", "Notification settings", "Multilingual UI", "Local avatar cache"],
+        },
+        {
+          title: "Commercial extensions — with Platform",
+          tags: ["Red packets", "Transfers", "Money message cards", "Transaction history", "Bank cards & withdrawal", "Sign-in rewards"],
+        },
+      ],
+    },
     parts: {
       eyebrow: "Who does what",
       title: "Four parts, one backbone.",
-      body: "Full capability lists are not repeated here — see PrivChat Server's overview for the backbone and PrivChat App for the client surface.",
+      body: "Feature lists live above on this page; the product pages focus on each part's strengths — the server on architecture, security, and operations, the app on delivery.",
       cards: [
         {
           title: "PrivChat Server",
@@ -132,10 +215,65 @@ const T = {
         },
       ],
     },
+    capabilities: {
+      eyebrow: "完整功能面",
+      title: "聊天场景开箱即有的一切。",
+      body: "这是全产品线唯一的权威功能清单：消息、群组与同步来自开源服务端；媒体、二维码与个性化来自 App 家族；商业扩展随 Platform 交付。",
+      groups: [
+        {
+          title: "消息",
+          tags: ["文本与富媒体", "@提及", "回复引用", "消息转发", "表情回应", "2 分钟撤回", "媒体预览", "双端去重"],
+        },
+        {
+          title: "群组",
+          tags: ["建群与成员管理", "角色与权限", "群主转让", "单人/全员禁言", "二维码入群", "入群审批", "群头像九宫格"],
+        },
+        {
+          title: "好友与隐私",
+          tags: ["UID / 用户名搜索", "申请与验证", "备注名", "黑名单", "非好友消息管控", "隐私设置与来源验证"],
+        },
+        {
+          title: "会话",
+          tags: ["统一 Channel 模型", "自动创建", "置顶", "隐藏", "免打扰", "实体同步"],
+        },
+        {
+          title: "多端同步",
+          tags: ["Telegram 式 pts 同步", "幂等与去重", "缺口检测", "离线队列", "断线补拉", "云端聊天记录"],
+        },
+        {
+          title: "已读与状态",
+          tags: ["已读回执", "未读计数", "已读列表与统计", "在线状态", "输入中（服务端限频）"],
+        },
+        {
+          title: "帐号与设备",
+          tags: ["短信验证码 / 账号密码", "邀请码注册", "多账号切换", "扫码登录", "设备管理与踢下线", "资料补全引导"],
+        },
+        {
+          title: "文件与媒体",
+          tags: ["上传 token 与校验", "HTTP 上传下载", "本地 + S3 兼容多后端", "缩略图（SDK）"],
+        },
+        {
+          title: "通知与推送",
+          tags: ["好友/群事件通知", "系统通知", "APNS / FCM / 华为 HMS", "小米 / OPPO / vivo / 荣耀 等"],
+        },
+        {
+          title: "二维码与分享",
+          tags: ["二维码名片", "群二维码", "扫一扫加好友 / 进群", "协议深链"],
+        },
+        {
+          title: "个性化",
+          tags: ["主题外观", "通知设置", "多语言界面", "头像本地缓存"],
+        },
+        {
+          title: "商业扩展 — 随 Platform",
+          tags: ["红包", "转账", "资金卡片消息", "账单明细", "银行卡与提现", "签到奖励"],
+        },
+      ],
+    },
     parts: {
       eyebrow: "各自的职责",
       title: "四个部件，一个底座。",
-      body: "完整功能清单不在这一页重复 — 服务端能力见 PrivChat Server 的功能全景，客户端功能见 PrivChat App。",
+      body: "功能清单就在本页上方；产品页各自聚焦优势 — 服务端讲架构、安全与运维，App 讲交付。",
       cards: [
         {
           title: "PrivChat Server",
@@ -205,10 +343,65 @@ const T = {
         },
       ],
     },
+    capabilities: {
+      eyebrow: "完整功能面",
+      title: "聊天場景開箱即有的一切。",
+      body: "這是全產品線唯一的權威功能清單：訊息、群組與同步來自開源伺服器；媒體、QR Code 與個人化來自 App 家族；商業擴充隨 Platform 交付。",
+      groups: [
+        {
+          title: "訊息",
+          tags: ["文字與富媒體", "@提及", "回覆引用", "訊息轉發", "表情回應", "2 分鐘撤回", "媒體預覽", "雙端去重"],
+        },
+        {
+          title: "群組",
+          tags: ["建群與成員管理", "角色與權限", "群主轉讓", "單人/全員禁言", "QR Code 入群", "入群審批", "群頭像九宮格"],
+        },
+        {
+          title: "好友與隱私",
+          tags: ["UID / 使用者名稱搜尋", "申請與驗證", "備註名", "黑名單", "非好友訊息管控", "隱私設定與來源驗證"],
+        },
+        {
+          title: "對話",
+          tags: ["統一 Channel 模型", "自動建立", "置頂", "隱藏", "免打擾", "實體同步"],
+        },
+        {
+          title: "多裝置同步",
+          tags: ["Telegram 式 pts 同步", "冪等與去重", "缺口偵測", "離線佇列", "斷線補拉", "雲端聊天記錄"],
+        },
+        {
+          title: "已讀與狀態",
+          tags: ["已讀回執", "未讀計數", "已讀列表與統計", "在線狀態", "輸入中（伺服器端限頻）"],
+        },
+        {
+          title: "帳號與裝置",
+          tags: ["簡訊驗證碼 / 帳號密碼", "邀請碼註冊", "多帳號切換", "掃碼登入", "裝置管理與踢下線", "資料補全引導"],
+        },
+        {
+          title: "檔案與媒體",
+          tags: ["上傳 token 與校驗", "HTTP 上傳下載", "本地 + S3 相容多後端", "縮圖（SDK）"],
+        },
+        {
+          title: "通知與推送",
+          tags: ["好友/群組事件通知", "系統通知", "APNS / FCM / 華為 HMS", "小米 / OPPO / vivo / 榮耀 等"],
+        },
+        {
+          title: "QR Code 與分享",
+          tags: ["QR Code 名片", "群 QR Code", "掃一掃加好友 / 進群", "協定深連結"],
+        },
+        {
+          title: "個人化",
+          tags: ["主題外觀", "通知設定", "多語言介面", "頭像本地快取"],
+        },
+        {
+          title: "商業擴充 — 隨 Platform",
+          tags: ["紅包", "轉帳", "資金卡片訊息", "帳單明細", "銀行卡與提領", "簽到獎勵"],
+        },
+      ],
+    },
     parts: {
       eyebrow: "各自的職責",
       title: "四個部件，一個底座。",
-      body: "完整功能清單不在這一頁重複 — 伺服器能力見 PrivChat Server 的功能全景，客戶端功能見 PrivChat App。",
+      body: "功能清單就在本頁上方；產品頁各自聚焦優勢 — 伺服器講架構、安全與維運，App 講交付。",
       cards: [
         {
           title: "PrivChat Server",
@@ -291,6 +484,17 @@ export function ChatPage() {
       <section className="section section-deep">
         <div className="container split-heading">
           <div>
+            <SectionEyebrow>{t.capabilities.eyebrow}</SectionEyebrow>
+            <h2>{t.capabilities.title}</h2>
+          </div>
+          <p>{t.capabilities.body}</p>
+        </div>
+        <CapabilityGrid groups={t.capabilities.groups} icons={CAPABILITY_ICONS} />
+      </section>
+
+      <section className="section">
+        <div className="container split-heading">
+          <div>
             <SectionEyebrow>{t.parts.eyebrow}</SectionEyebrow>
             <h2>{t.parts.title}</h2>
           </div>
@@ -303,7 +507,7 @@ export function ChatPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-deep">
         <div className="container split-heading">
           <div>
             <SectionEyebrow>{t.under.eyebrow}</SectionEyebrow>

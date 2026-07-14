@@ -61,17 +61,17 @@ export const SEO: Record<Route, Record<Lang, Meta>> = {
     en: {
       title: "Chat & Messaging — PrivChat",
       description:
-        "Direct messages, group channels, offline sync, read cursors, and typed RPC on a self-hosted Rust backbone — in-app messaging without socket plumbing.",
+        "The complete PrivChat feature surface — messaging, groups, multi-device sync, read state, QR, personalization, and commercial extensions — plus three adoption paths from SDK integration to a white-label app.",
     },
     cn: {
       title: "聊天与消息 — PrivChat",
       description:
-        "单聊、群组 Channel、离线同步、已读游标与强类型 RPC，运行在自托管 Rust 底座上 — 应用内消息，无需自建 socket 管道。",
+        "PrivChat 完整功能面 — 消息、群组、多端同步、已读、二维码、个性化与商业扩展 — 以及从 SDK 集成到白标 App 的三条采用路径。",
     },
     tw: {
       title: "聊天與訊息 — PrivChat",
       description:
-        "單聊、群組 Channel、離線同步、已讀游標與強型別 RPC，執行在自架 Rust 底座上 — 應用內訊息，無需自建 socket 管道。",
+        "PrivChat 完整功能面 — 訊息、群組、多裝置同步、已讀、QR Code、個人化與商業擴充 — 以及從 SDK 整合到白牌 App 的三條採用路徑。",
     },
   },
   "/game/": {
