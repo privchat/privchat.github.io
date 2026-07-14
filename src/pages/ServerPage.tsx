@@ -1,12 +1,22 @@
 import {
+  BellRing,
   Boxes,
+  CheckCheck,
   Code2,
   Cpu,
+  FolderUp,
+  Gauge,
+  Inbox,
+  KeyRound,
   Layers3,
   Lock,
+  MessageSquareText,
+  RefreshCcw,
   Rocket,
   Server,
   ShieldCheck,
+  UserPlus,
+  Users,
   Zap,
 } from "lucide-react";
 import {
@@ -20,6 +30,19 @@ import {
 import { useT } from "../i18n";
 
 const ADVANTAGE_ICONS = [Cpu, Zap, Boxes, Lock, ShieldCheck, Server];
+
+const CAPABILITY_ICONS = [
+  MessageSquareText,
+  Users,
+  UserPlus,
+  Inbox,
+  RefreshCcw,
+  CheckCheck,
+  KeyRound,
+  FolderUp,
+  BellRing,
+  Gauge,
+];
 
 const T = {
   en: {
@@ -59,6 +82,53 @@ const T = {
         {
           title: "Your infrastructure, your data",
           body: "Fully self-hosted with no phone-home. Data sovereignty and compliance stay in your hands, not a vendor's.",
+        },
+      ],
+    },
+    capabilities: {
+      eyebrow: "What's inside",
+      title: "A complete IM surface, out of the box.",
+      body: "Grouped by module, everything below is implemented in the open-source server itself — matching the repository README. Commercial capabilities like wallets and red packets live in the Platform layer.",
+      groups: [
+        {
+          title: "Messaging",
+          tags: ["Text & rich media", "@mentions", "Replies", "Reactions", "2-minute revoke", "Dedup on both ends"],
+        },
+        {
+          title: "Groups",
+          tags: ["Create & manage members", "Roles & permissions", "Ownership transfer", "Mute one or all", "QR join", "Join approval"],
+        },
+        {
+          title: "Friends & privacy",
+          tags: ["Requests & approval", "Aliases", "Blacklist", "Non-friend message control", "User & QR search", "Privacy & source checks"],
+        },
+        {
+          title: "Conversations",
+          tags: ["Unified channel model", "Auto-creation", "Pin", "Hide", "Mute", "Entity sync"],
+        },
+        {
+          title: "Multi-device sync",
+          tags: ["Telegram-style pts sync", "Idempotency", "Gap detection", "Commit log", "Offline queue", "Catch-up on reconnect"],
+        },
+        {
+          title: "Read state & presence",
+          tags: ["Read receipts", "Unread counts", "Read lists & stats", "Presence subscriptions", "Batch queries", "Typing (rate-limited)"],
+        },
+        {
+          title: "Auth & devices",
+          tags: ["JWT (RS256 + JWKS)", "Refresh tokens", "Unified service token API", "Multi-device sessions", "Device manage & kick", "QR login"],
+        },
+        {
+          title: "Files & media",
+          tags: ["Upload tokens & validation", "HTTP upload/download", "Local + S3-compatible backends", "OSS / COS / MinIO / Garage", "Thumbnails (SDK)", "Powered by OpenDAL"],
+        },
+        {
+          title: "Notifications & push",
+          tags: ["Friend & group event notices", "System notifications", "Push planner/worker", "APNS / FCM / Huawei HMS", "Xiaomi / OPPO / vivo / Honor & more"],
+        },
+        {
+          title: "Ops & integration",
+          tags: ["Prometheus /metrics", "Health checks", "Admin service API", "Server-event dispatch", "Embedded migrations", "Graceful shutdown & Docker"],
         },
       ],
     },
@@ -114,6 +184,53 @@ const T = {
         },
       ],
     },
+    capabilities: {
+      eyebrow: "功能全景",
+      title: "开箱即有的完整 IM 功能面。",
+      body: "以下能力按模块列出，全部实现于开源服务端本体 — 与仓库 README 的功能清单一致；红包、钱包等商业能力属于 Platform 层。",
+      groups: [
+        {
+          title: "消息",
+          tags: ["文本与富媒体", "@提及", "回复引用", "表情回应", "2 分钟撤回", "双端去重"],
+        },
+        {
+          title: "群组",
+          tags: ["建群与成员管理", "角色与权限", "群主转让", "单人/全员禁言", "二维码入群", "入群审批"],
+        },
+        {
+          title: "好友与隐私",
+          tags: ["申请与验证", "备注名", "黑名单", "非好友消息管控", "用户与二维码搜索", "隐私设置与来源验证"],
+        },
+        {
+          title: "会话",
+          tags: ["统一 Channel 模型", "自动创建", "置顶", "隐藏", "免打扰", "实体同步"],
+        },
+        {
+          title: "多端同步",
+          tags: ["Telegram 式 pts 同步", "幂等与去重", "缺口检测", "Commit Log", "离线队列", "断线补拉"],
+        },
+        {
+          title: "已读与状态",
+          tags: ["已读回执", "未读计数", "已读列表与统计", "在线状态订阅", "批量查询", "输入中（服务端限频）"],
+        },
+        {
+          title: "认证与设备",
+          tags: ["JWT（RS256 + JWKS）", "Refresh token", "统一服务 token API", "多设备会话", "设备管理与踢下线", "扫码登录"],
+        },
+        {
+          title: "文件与媒体",
+          tags: ["上传 token 与校验", "HTTP 上传下载", "本地 + S3 兼容多后端", "OSS / COS / MinIO / Garage", "缩略图（SDK）", "OpenDAL 驱动"],
+        },
+        {
+          title: "通知与推送",
+          tags: ["好友/群事件通知", "系统通知", "推送编排 planner/worker", "APNS / FCM / 华为 HMS", "小米 / OPPO / vivo / 荣耀 等"],
+        },
+        {
+          title: "运维与集成",
+          tags: ["Prometheus /metrics", "健康检查", "Admin Service API", "server-event 分发", "内嵌 migrations", "优雅停机与 Docker"],
+        },
+      ],
+    },
     arch: {
       eyebrow: "它的位置",
       title: "所有产品面之下的那个底座。",
@@ -166,6 +283,53 @@ const T = {
         },
       ],
     },
+    capabilities: {
+      eyebrow: "功能全景",
+      title: "開箱即有的完整 IM 功能面。",
+      body: "以下能力按模組列出，全部實作於開源伺服器本體 — 與儲存庫 README 的功能清單一致；紅包、錢包等商業能力屬於 Platform 層。",
+      groups: [
+        {
+          title: "訊息",
+          tags: ["文字與富媒體", "@提及", "回覆引用", "表情回應", "2 分鐘撤回", "雙端去重"],
+        },
+        {
+          title: "群組",
+          tags: ["建群與成員管理", "角色與權限", "群主轉讓", "單人/全員禁言", "QR Code 入群", "入群審批"],
+        },
+        {
+          title: "好友與隱私",
+          tags: ["申請與驗證", "備註名", "黑名單", "非好友訊息管控", "使用者與 QR Code 搜尋", "隱私設定與來源驗證"],
+        },
+        {
+          title: "對話",
+          tags: ["統一 Channel 模型", "自動建立", "置頂", "隱藏", "免打擾", "實體同步"],
+        },
+        {
+          title: "多裝置同步",
+          tags: ["Telegram 式 pts 同步", "冪等與去重", "缺口偵測", "Commit Log", "離線佇列", "斷線補拉"],
+        },
+        {
+          title: "已讀與狀態",
+          tags: ["已讀回執", "未讀計數", "已讀列表與統計", "在線狀態訂閱", "批次查詢", "輸入中（伺服器端限頻）"],
+        },
+        {
+          title: "認證與裝置",
+          tags: ["JWT（RS256 + JWKS）", "Refresh token", "統一服務 token API", "多裝置連線", "裝置管理與踢下線", "掃碼登入"],
+        },
+        {
+          title: "檔案與媒體",
+          tags: ["上傳 token 與校驗", "HTTP 上傳下載", "本地 + S3 相容多後端", "OSS / COS / MinIO / Garage", "縮圖（SDK）", "OpenDAL 驅動"],
+        },
+        {
+          title: "通知與推送",
+          tags: ["好友/群組事件通知", "系統通知", "推送編排 planner/worker", "APNS / FCM / 華為 HMS", "小米 / OPPO / vivo / 榮耀 等"],
+        },
+        {
+          title: "維運與整合",
+          tags: ["Prometheus /metrics", "健康檢查", "Admin Service API", "server-event 分發", "內嵌 migrations", "優雅停機與 Docker"],
+        },
+      ],
+    },
     arch: {
       eyebrow: "它的位置",
       title: "所有產品面之下的那個底座。",
@@ -211,6 +375,36 @@ export function ServerPage() {
       </section>
 
       <section className="section section-deep">
+        <div className="container split-heading">
+          <div>
+            <SectionEyebrow>{t.capabilities.eyebrow}</SectionEyebrow>
+            <h2>{t.capabilities.title}</h2>
+          </div>
+          <p>{t.capabilities.body}</p>
+        </div>
+        <div className="container feature-grid capability-grid">
+          {t.capabilities.groups.map((group, i) => {
+            const Icon = CAPABILITY_ICONS[i];
+            return (
+              <article className="capability-card" key={group.title}>
+                <div className="capability-head">
+                  <span className="feature-icon">
+                    <Icon size={20} />
+                  </span>
+                  <h3>{group.title}</h3>
+                </div>
+                <div className="capability-tags">
+                  {group.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container split-heading">
           <div>
             <SectionEyebrow>{t.arch.eyebrow}</SectionEyebrow>
