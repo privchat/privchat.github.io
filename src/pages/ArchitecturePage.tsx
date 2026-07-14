@@ -34,7 +34,7 @@ const T = {
       steps: [
         {
           title: "Connect",
-          body: "The SDK picks a transport — QUIC, TCP, or WebSocket — and establishes one long-lived connection with automatic failover.",
+          body: "The SDK picks a transport — QUIC or TCP on native, WebSocket on the web — and establishes one long-lived connection.",
         },
         {
           title: "Authenticate",
@@ -57,7 +57,7 @@ const T = {
     transports: {
       eyebrow: "Transports",
       title: "Three transports. Zero app changes.",
-      body: "The protocol is transport-agnostic: pick per platform, fail over at runtime, and never touch application code.",
+      body: "The protocol is transport-agnostic: QUIC/TCP with runtime failover on native clients, WebSocket on the web — application code never changes.",
       head: ["Transport", "Strengths", "Best for"],
       rows: [
         ["QUIC", "Lowest latency, multiplexed streams, connection migration", "Modern mobile & native clients"],
@@ -76,7 +76,7 @@ const T = {
         },
         {
           title: "PrivChat SDK",
-          body: "One Rust client engine with first-class TypeScript and Kotlin Multiplatform bindings. Same behavior on every platform.",
+          body: "A Rust reference engine with native Kotlin bindings via UniFFI, plus an idiomatic TypeScript implementation for the web — one protocol everywhere.",
         },
         {
           title: "PrivChat Platform",
@@ -116,7 +116,7 @@ const T = {
       steps: [
         {
           title: "连接",
-          body: "SDK 选择传输 — QUIC、TCP 或 WebSocket — 建立一条带自动故障切换的长连接。",
+          body: "SDK 选择传输 — 原生端 QUIC 或 TCP，Web 端 WebSocket — 建立一条长连接。",
         },
         {
           title: "鉴权",
@@ -139,7 +139,7 @@ const T = {
     transports: {
       eyebrow: "传输",
       title: "三种传输，应用层零改动。",
-      body: "协议与传输无关：按平台选择，运行时故障切换，业务代码永远不用动。",
+      body: "协议与传输无关：原生客户端 QUIC/TCP 运行时切换，Web 端 WebSocket — 业务代码永远不用动。",
       head: ["传输", "优势", "适用场景"],
       rows: [
         ["QUIC", "最低延迟、多路复用流、连接迁移", "现代移动与原生客户端"],
@@ -158,7 +158,7 @@ const T = {
         },
         {
           title: "PrivChat SDK",
-          body: "一个 Rust 客户端引擎，配一等的 TypeScript 与 Kotlin 多平台绑定。所有平台行为一致。",
+          body: "Rust 参考引擎 + UniFFI 原生 Kotlin 绑定，外加面向 Web 的地道 TypeScript 实现 — 处处同一套协议。",
         },
         {
           title: "PrivChat 平台",
@@ -198,7 +198,7 @@ const T = {
       steps: [
         {
           title: "連線",
-          body: "SDK 選擇傳輸 — QUIC、TCP 或 WebSocket — 建立一條帶自動故障切換的長連線。",
+          body: "SDK 選擇傳輸 — 原生端 QUIC 或 TCP，Web 端 WebSocket — 建立一條長連線。",
         },
         {
           title: "鑑權",
@@ -221,7 +221,7 @@ const T = {
     transports: {
       eyebrow: "傳輸",
       title: "三種傳輸，應用層零改動。",
-      body: "協議與傳輸無關：按平臺選擇，執行時故障切換，業務程式碼永遠不用動。",
+      body: "協定與傳輸無關：原生客戶端 QUIC/TCP 執行時切換，Web 端 WebSocket — 業務程式碼永遠不用動。",
       head: ["傳輸", "優勢", "適用場景"],
       rows: [
         ["QUIC", "最低延遲、多路複用流、連線遷移", "現代移動與原生客戶端"],
@@ -240,7 +240,7 @@ const T = {
         },
         {
           title: "PrivChat SDK",
-          body: "一個 Rust 客戶端引擎，配一等的 TypeScript 與 Kotlin 多平臺繫結。所有平臺行為一致。",
+          body: "Rust 參考引擎 + UniFFI 原生 Kotlin 繫結，外加面向 Web 的道地 TypeScript 實作 — 處處同一套協定。",
         },
         {
           title: "PrivChat 平臺",

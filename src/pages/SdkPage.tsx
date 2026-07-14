@@ -8,20 +8,20 @@ const T = {
   en: {
     hero: {
       eyebrow: "SDKs & quickstart",
-      title: "One Rust engine.",
+      title: "One wire protocol.",
       accent: "Three first-class SDKs.",
-      body: "The Rust core drives connection state, storage, and sync everywhere. TypeScript and Kotlin bind to the same engine — so every platform behaves the same way, down to reconnect edge cases.",
+      body: "Rust is the reference engine; Kotlin shares it natively through UniFFI, and TypeScript is an idiomatic WebSocket implementation of the same protocol — all verified against the same server behavior.",
       primary: "Read tutorials",
       secondary: "See the architecture",
     },
     tracks: {
       eyebrow: "The three tracks",
-      title: "Same engine underneath, idiomatic on top.",
-      body: "Pick the language that fits your surface — behavior stays identical because the core is shared, not reimplemented.",
+      title: "One protocol underneath, idiomatic on top.",
+      body: "Pick the language that fits your surface — the wire contract is shared, so every SDK speaks the same protocol to the same server.",
       cards: [
         {
           title: "Rust Core",
-          body: "The shared client engine: actor command queue, SQLite and Sled local storage, sync, event broadcast, and the FFI surface.",
+          body: "The reference client engine: actor command queue, SQLite and Sled local storage, sync, event broadcast, and the FFI surface.",
         },
         {
           title: "TypeScript",
@@ -91,20 +91,20 @@ const T = {
   cn: {
     hero: {
       eyebrow: "SDK 与快速上手",
-      title: "一个 Rust 引擎，",
+      title: "一套线上协议，",
       accent: "三个一等 SDK。",
-      body: "Rust 内核在所有平台驱动连接状态、存储与同步。TypeScript 与 Kotlin 绑定同一个引擎 — 每个平台行为一致，连重连的边界情况都一样。",
+      body: "Rust 是参考引擎；Kotlin 通过 UniFFI 原生共享它，TypeScript 则是同一协议的地道 WebSocket 实现 — 三者对照同一套服务端行为验证。",
       primary: "阅读教程",
       secondary: "查看架构",
     },
     tracks: {
       eyebrow: "三条轨道",
-      title: "底层同一个引擎，上层各自地道。",
-      body: "选择适合你产品面的语言 — 因为内核是共享的而非重新实现，行为保持完全一致。",
+      title: "底层同一套协议，上层各自地道。",
+      body: "选择适合你产品面的语言 — 线上契约是共享的，每个 SDK 对同一个服务端说同一套协议。",
       cards: [
         {
           title: "Rust 内核",
-          body: "共享客户端引擎：actor 命令队列、SQLite 与 Sled 本地存储、同步、事件广播与 FFI 接口。",
+          body: "参考客户端引擎：actor 命令队列、SQLite 与 Sled 本地存储、同步、事件广播与 FFI 接口。",
         },
         {
           title: "TypeScript",
@@ -162,20 +162,20 @@ const T = {
   tw: {
     hero: {
       eyebrow: "SDK 與快速上手",
-      title: "一個 Rust 引擎，",
+      title: "一套線上協定，",
       accent: "三個一等 SDK。",
-      body: "Rust 核心在所有平臺驅動連線狀態、儲存與同步。TypeScript 與 Kotlin 繫結同一個引擎 — 每個平臺行為一致，連重連的邊界情況都一樣。",
+      body: "Rust 是參考引擎；Kotlin 透過 UniFFI 原生共享它，TypeScript 則是同一協定的道地 WebSocket 實作 — 三者對照同一套伺服器行為驗證。",
       primary: "閱讀教程",
       secondary: "檢視架構",
     },
     tracks: {
       eyebrow: "三條軌道",
-      title: "底層同一個引擎，上層各自地道。",
-      body: "選擇適合你產品面的語言 — 因為核心是共享的而非重新實現，行為保持完全一致。",
+      title: "底層同一套協定，上層各自道地。",
+      body: "選擇適合你產品面的語言 — 線上契約是共享的，每個 SDK 對同一個伺服器說同一套協定。",
       cards: [
         {
           title: "Rust 核心",
-          body: "共享客戶端引擎：actor 命令佇列、SQLite 與 Sled 本地儲存、同步、事件廣播與 FFI 介面。",
+          body: "參考客戶端引擎：actor 命令佇列、SQLite 與 Sled 本地儲存、同步、事件廣播與 FFI 介面。",
         },
         {
           title: "TypeScript",

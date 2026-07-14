@@ -95,17 +95,17 @@ export const SEO: Record<Route, Record<Lang, Meta>> = {
     en: {
       title: "SDKs & Quickstart — PrivChat",
       description:
-        "One Rust engine, three first-class SDKs: Rust core, TypeScript, and Kotlin Multiplatform. Install to first message in minutes.",
+        "One wire protocol, three first-class SDKs: a Rust reference engine, Kotlin via UniFFI, and an idiomatic TypeScript implementation for the web.",
     },
     cn: {
       title: "SDK 与快速上手 — PrivChat",
       description:
-        "一个 Rust 引擎，三个一等 SDK：Rust 内核、TypeScript 与 Kotlin 多平台。几分钟内从安装到收到第一条消息。",
+        "一套线上协议，三个一等 SDK：Rust 参考引擎、UniFFI 驱动的 Kotlin，以及面向 Web 的地道 TypeScript 实现。",
     },
     tw: {
       title: "SDK 與快速上手 — PrivChat",
       description:
-        "一個 Rust 引擎，三個一等 SDK：Rust 核心、TypeScript 與 Kotlin 多平台。幾分鐘內從安裝到收到第一則訊息。",
+        "一套線上協定，三個一等 SDK：Rust 參考引擎、UniFFI 驅動的 Kotlin，以及面向 Web 的道地 TypeScript 實作。",
     },
   },
   "/architecture/": {

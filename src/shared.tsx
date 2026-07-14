@@ -60,7 +60,7 @@ const protocolCopy = {
   en: [
     {
       title: "Multi-transport",
-      body: "QUIC for modern low-latency paths, TCP for compatibility, WebSocket for browsers — clients fail over without app changes.",
+      body: "QUIC for modern low-latency paths, TCP for compatibility, WebSocket for browsers — native clients fail over between transports; the protocol never changes.",
     },
     {
       title: "Channels first",
@@ -78,7 +78,7 @@ const protocolCopy = {
   cn: [
     {
       title: "多传输通道",
-      body: "QUIC 提供现代低延迟链路，TCP 保证兼容性，WebSocket 覆盖浏览器 — 客户端自动切换，应用层零改动。",
+      body: "QUIC 提供现代低延迟链路，TCP 保证兼容性，WebSocket 覆盖浏览器 — 原生客户端可在传输间切换，协议始终不变。",
     },
     {
       title: "Channel 优先",
@@ -96,7 +96,7 @@ const protocolCopy = {
   tw: [
     {
       title: "多傳輸通道",
-      body: "QUIC 提供現代低延遲鏈路，TCP 保證相容性，WebSocket 覆蓋瀏覽器 — 客戶端自動切換，應用層零改動。",
+      body: "QUIC 提供現代低延遲鏈路，TCP 保證相容性，WebSocket 覆蓋瀏覽器 — 原生客戶端可在傳輸間切換，協定始終不變。",
     },
     {
       title: "Channel 優先",
@@ -196,7 +196,7 @@ export const quickstartTabs: CodeTab[] = [
     id: "typescript",
     label: "TypeScript",
     icon: Code2,
-    install: "git clone https://github.com/privchat/privchat-sdk-typescript   # npm package coming soon",
+    install: "# npm package coming soon — build from source: github.com/privchat/privchat-sdk-typescript",
     code: `import { PrivchatClient } from "@privchat/sdk";
 
 const client = new PrivchatClient({
@@ -215,7 +215,7 @@ client.onPushMessage((message) => {
     id: "rust",
     label: "Rust",
     icon: Terminal,
-    install: "git clone https://github.com/privchat/privchat-sdk   # crates.io release coming soon",
+    install: "cargo add privchat-sdk",
     code: `use privchat_sdk::{PrivchatConfig, PrivchatSdk};
 
 #[tokio::main]
@@ -233,7 +233,7 @@ async fn main() -> anyhow::Result<()> {
     id: "kotlin",
     label: "Kotlin",
     icon: Cpu,
-    install: "git clone https://github.com/privchat/privchat-sdk-kotlin   # Maven artifact coming soon",
+    install: "# Maven artifact coming soon — build from source: github.com/privchat/privchat-sdk-kotlin",
     code: `val client = PrivchatClient.create(
     PrivchatConfig(
         dataDir = "./privchat-data",
@@ -717,7 +717,7 @@ export function ArchitectureDiagram() {
 const quickstartCopy = {
   en: {
     eyebrow: "Developer experience",
-    title: "From install to first message in minutes.",
+    title: "Connect, authenticate, subscribe — the core loop.",
     body: "Install the SDK, connect, authenticate, subscribe, receive. Pick your language — every public snippet is verified against the real repositories before release.",
     bodyCompact:
       "Install, connect, authenticate, subscribe, receive — then dive into the SDK pages for the full surface.",
@@ -727,7 +727,7 @@ const quickstartCopy = {
   },
   cn: {
     eyebrow: "开发者体验",
-    title: "几分钟内从安装到收到第一条消息。",
+    title: "连接、鉴权、订阅 — 核心流程就这三步。",
     body: "安装 SDK、连接、鉴权、订阅、接收。选择你的语言 — 所有公开示例在发布前都对照真实仓库验证。",
     bodyCompact: "安装、连接、鉴权、订阅、接收 — 更完整的能力请进入 SDK 页面。",
     quickstart: "快速上手",
@@ -736,7 +736,7 @@ const quickstartCopy = {
   },
   tw: {
     eyebrow: "開發者體驗",
-    title: "幾分鐘內從安裝到收到第一則訊息。",
+    title: "連線、驗證、訂閱 — 核心流程就這三步。",
     body: "安裝 SDK、連線、驗證、訂閱、接收。選擇你的語言 — 所有公開範例在發布前都對照真實儲存庫驗證。",
     bodyCompact: "安裝、連線、驗證、訂閱、接收 — 更完整的能力請進入 SDK 頁面。",
     quickstart: "快速上手",
