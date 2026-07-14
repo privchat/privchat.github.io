@@ -455,7 +455,7 @@ export function AppHeader({ route }: { route: Route }) {
           <RoutedLink className="text-link" href="/tutorials/">
             {t.docs}
           </RoutedLink>
-          <RoutedLink className="button button-small" href="/enterprise/">
+          <RoutedLink className="button button-small" href="/contact/">
             <MessageSquare size={16} />
             {t.contact}
           </RoutedLink>
@@ -485,7 +485,7 @@ export function AppHeader({ route }: { route: Route }) {
                   </RoutedLink>,
                 ],
           )}
-          <RoutedLink href="/enterprise/" onClick={close}>
+          <RoutedLink href="/contact/" onClick={close}>
             {t.contact}
           </RoutedLink>
           <a href="https://github.com/privchat" target="_blank" rel="noreferrer" onClick={close}>
@@ -592,7 +592,7 @@ export function PageHero({
   accent?: string;
   body: string;
   primary?: { label: string; href?: Route; externalHref?: string; icon: LucideIcon };
-  secondary?: { label: string; href: Route; icon: LucideIcon };
+  secondary?: { label: string; href?: Route; externalHref?: string; icon: LucideIcon };
 }) {
   const PrimaryIcon = primary?.icon;
   const SecondaryIcon = secondary?.icon;
@@ -620,7 +620,18 @@ export function PageHero({
                 {primary.label}
               </RoutedLink>
             ) : null}
-            {secondary && SecondaryIcon ? (
+            {secondary && SecondaryIcon && secondary.externalHref ? (
+              <a
+                className="button button-secondary"
+                href={secondary.externalHref}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SecondaryIcon size={18} />
+                {secondary.label}
+              </a>
+            ) : null}
+            {secondary && SecondaryIcon && !secondary.externalHref && secondary.href ? (
               <RoutedLink className="button button-secondary" href={secondary.href}>
                 <SecondaryIcon size={18} />
                 {secondary.label}
@@ -1039,6 +1050,7 @@ const footerCopy: Record<
         items: [
           { label: "Open Source", href: "/open-source/" },
           { label: "Enterprise & Pricing", href: "/enterprise/" },
+          { label: "Contact", href: "/contact/" },
         ],
       },
     ],
@@ -1077,6 +1089,7 @@ const footerCopy: Record<
         items: [
           { label: "开源", href: "/open-source/" },
           { label: "企业与定价", href: "/enterprise/" },
+          { label: "联系我们", href: "/contact/" },
         ],
       },
     ],
@@ -1115,6 +1128,7 @@ const footerCopy: Record<
         items: [
           { label: "開源", href: "/open-source/" },
           { label: "企業與定價", href: "/enterprise/" },
+          { label: "聯絡我們", href: "/contact/" },
         ],
       },
     ],

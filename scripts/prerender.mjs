@@ -21,6 +21,7 @@ const routes = [
   "/open-source/",
   "/enterprise/",
   "/platform/",
+  "/contact/",
 ];
 
 const langs = [

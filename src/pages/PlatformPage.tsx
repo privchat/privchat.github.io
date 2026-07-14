@@ -299,7 +299,7 @@ export function PlatformPage() {
         title={t.hero.title}
         accent={t.hero.accent}
         body={t.hero.body}
-        primary={{ label: t.hero.primary, href: "/enterprise/", icon: UserRoundCog }}
+        primary={{ label: t.hero.primary, href: "/contact/", icon: UserRoundCog }}
         secondary={{ label: t.hero.secondary, href: "/game/", icon: Gamepad2 }}
       />
 
@@ -367,7 +367,7 @@ export function PlatformPage() {
         eyebrow={t.cta.eyebrow}
         title={t.cta.title}
         body={t.cta.body}
-        action={{ label: t.cta.action, href: "/enterprise/", icon: UserRoundCog }}
+        action={{ label: t.cta.action, href: "/contact/", icon: UserRoundCog }}
       />
     </>
   );

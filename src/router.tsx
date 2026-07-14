@@ -16,7 +16,8 @@ export type Route =
   | "/tutorials/"
   | "/open-source/"
   | "/enterprise/"
-  | "/platform/";
+  | "/platform/"
+  | "/contact/";
 
 export const routes: Route[] = [
   "/",
@@ -31,6 +32,7 @@ export const routes: Route[] = [
   "/open-source/",
   "/enterprise/",
   "/platform/",
+  "/contact/",
 ];
 
 const routesSet = new Set<string>(routes);

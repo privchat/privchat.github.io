@@ -281,7 +281,7 @@ export function EnterprisePage() {
         title={t.hero.title}
         accent={t.hero.accent}
         body={t.hero.body}
-        primary={{ label: t.hero.primary, externalHref: "mailto:contact@privchat.dev", icon: UserRoundCog }}
+        primary={{ label: t.hero.primary, href: "/contact/", icon: UserRoundCog }}
         secondary={{ label: t.hero.secondary, href: "/platform/", icon: Layers3 }}
       />
 
@@ -309,10 +309,10 @@ export function EnterprisePage() {
                   ))}
                 </ul>
                 {featured ? (
-                  <a className="button button-primary" href="mailto:contact@privchat.dev">
+                  <RoutedLink className="button button-primary" href="/contact/">
                     <UserRoundCog size={18} />
                     {tier.cta}
-                  </a>
+                  </RoutedLink>
                 ) : (
                   <RoutedLink className="button button-secondary" href="/sdk/">
                     <Rocket size={18} />

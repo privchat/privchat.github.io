@@ -568,6 +568,29 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.channel-soon {
+  opacity: 0.72;
+}
+
+.channel-soon h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.soon-badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(148, 163, 184, 0.08);
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 550;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
 .capability-card {
   padding: 24px;
   border-radius: var(--radius-lg);

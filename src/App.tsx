@@ -6,6 +6,7 @@ import { AgentsPage } from "./pages/AgentsPage";
 import { AppPage } from "./pages/AppPage";
 import { ArchitecturePage } from "./pages/ArchitecturePage";
 import { ChatPage } from "./pages/ChatPage";
+import { ContactPage } from "./pages/ContactPage";
 import { EnterprisePage } from "./pages/EnterprisePage";
 import { GamePage } from "./pages/GamePage";
 import { HomePage } from "./pages/HomePage";
@@ -39,6 +40,8 @@ function RouteContent({ route }: { route: Route }) {
       return <EnterprisePage />;
     case "/platform/":
       return <PlatformPage />;
+    case "/contact/":
+      return <ContactPage />;
     default:
       return <HomePage />;
   }

@@ -345,7 +345,7 @@ export function AppPage() {
         title={t.hero.title}
         accent={t.hero.accent}
         body={t.hero.body}
-        primary={{ label: t.hero.primary, externalHref: "mailto:contact@privchat.dev", icon: UserRoundCog }}
+        primary={{ label: t.hero.primary, href: "/contact/", icon: UserRoundCog }}
         secondary={{ label: t.hero.secondary, href: "/platform/", icon: Layers3 }}
       />
 
@@ -394,7 +394,7 @@ export function AppPage() {
         eyebrow={t.cta.eyebrow}
         title={t.cta.title}
         body={t.cta.body}
-        action={{ label: t.cta.action, href: "/enterprise/", icon: UserRoundCog }}
+        action={{ label: t.cta.action, href: "/contact/", icon: UserRoundCog }}
       />
     </>
   );

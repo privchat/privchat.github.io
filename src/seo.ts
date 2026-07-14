@@ -189,6 +189,23 @@ export const SEO: Record<Route, Record<Lang, Meta>> = {
       description: "即時伺服器、傳輸與 SDK 全部開源。探索儲存庫、參與貢獻，一起塑造這套協定。",
     },
   },
+  "/contact/": {
+    en: {
+      title: "Contact — PrivChat",
+      description:
+        "Reach the core engineering team: contact@privchat.dev for business and licensing, GitHub for developers. Telegram, WeChat, and QQ channels are on the way.",
+    },
+    cn: {
+      title: "联系我们 — PrivChat",
+      description:
+        "直达核心工程团队：商务与授权写信 contact@privchat.dev，开发者走 GitHub。Telegram、微信与 QQ 渠道即将开通。",
+    },
+    tw: {
+      title: "聯絡我們 — PrivChat",
+      description:
+        "直達核心工程團隊：商務與授權寫信 contact@privchat.dev，開發者走 GitHub。Telegram、微信與 QQ 渠道即將開通。",
+    },
+  },
   "/enterprise/": {
     en: {
       title: "Enterprise & Pricing — PrivChat",

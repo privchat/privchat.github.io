@@ -14,6 +14,7 @@ const pages = [
   ['open-source', '/open-source/'],
   ['enterprise', '/enterprise/'],
   ['platform', '/platform/'],
+  ['contact', '/contact/'],
 ];
 
 for (const [name, route] of pages) {
