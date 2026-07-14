@@ -78,9 +78,10 @@ const T = {
           title: "What you license",
           items: [
             "All platform modules, composable",
-            "Source access for licensees",
-            "Runs on your infrastructure",
-            "Admin console included",
+            "Native apps: iOS, Android, HarmonyOS",
+            "H5, React Native & Mini Program builds",
+            "PC web client & admin console",
+            "Source access, your infrastructure",
           ],
         },
         {
@@ -179,7 +180,7 @@ const T = {
       columns: [
         {
           title: "你获得的授权",
-          items: ["全部平台模块，可组合", "被授权方可获得源码", "运行在你的基础设施", "包含管理后台"],
+          items: ["全部平台模块，可组合", "原生 App：iOS、Android、鸿蒙", "H5、React Native 与小程序版本", "PC Web 客户端与管理后台", "源码可得，跑在你的基础设施"],
         },
         {
           title: "保持开源的部分",
@@ -262,7 +263,7 @@ const T = {
       columns: [
         {
           title: "你獲得的授權",
-          items: ["全部平臺模組，可組合", "被授權方可獲得原始碼", "執行在你的基礎設施", "包含管理後臺"],
+          items: ["全部平臺模組，可組合", "原生 App：iOS、Android、鴻蒙", "H5、React Native 與小程式版本", "PC Web 客戶端與管理後臺", "原始碼可得，跑在你的基礎設施"],
         },
         {
           title: "保持開源的部分",
