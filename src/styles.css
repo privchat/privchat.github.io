@@ -568,6 +568,17 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.path-combo {
+  align-self: flex-start;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  background: rgba(34, 211, 238, 0.08);
+  color: #a5f3fc;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+
 .channel-soon {
   opacity: 0.72;
 }
@@ -1266,6 +1277,26 @@ h3 {
   background: var(--panel-strong);
 }
 
+.nav-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-section + .nav-section {
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.nav-section-title {
+  padding: 6px 12px 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.75);
+}
+
 /* ---------- Card link footer ---------- */
 
 .feature-card-link {
@@ -1300,6 +1331,10 @@ h3 {
 .path-grid-embedded {
   width: auto;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.path-grid-three {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .path-grid-five {

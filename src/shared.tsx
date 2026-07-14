@@ -253,33 +253,47 @@ client.subscribeChannel(channelId = 900710001u, channelType = 1u, token = null)`
 /* ---------- navigation ---------- */
 
 type NavLeaf = { label: string; href: Route };
-type NavGroup = { label: string; items: NavLeaf[] };
+type NavSection = { title?: string; items: NavLeaf[] };
+type NavGroup = { label: string; sections: NavSection[] };
 type NavEntry = NavLeaf | NavGroup;
+
+function groupLeaves(group: NavGroup): NavLeaf[] {
+  return group.sections.flatMap((section) => section.items);
+}
 
 const navCopy: Record<Lang, NavEntry[]> = {
   en: [
     {
       label: "Products",
-      items: [
-        { label: "PrivChat Server", href: "/server/" },
-        { label: "PrivChat App", href: "/app/" },
-        { label: "PrivChat Platform", href: "/platform/" },
-      ],
-    },
-    {
-      label: "Solutions",
-      items: [
-        { label: "Chat & Messaging", href: "/chat/" },
-        { label: "PrivChat Game", href: "/game/" },
-        { label: "AI Agents & Bots", href: "/agents/" },
+      sections: [
+        {
+          title: "Build & deploy",
+          items: [
+            { label: "PrivChat Server", href: "/server/" },
+            { label: "PrivChat App", href: "/app/" },
+            { label: "PrivChat Platform", href: "/platform/" },
+          ],
+        },
+        {
+          title: "Use cases",
+          items: [
+            { label: "Chat & Messaging", href: "/chat/" },
+            { label: "Realtime Games", href: "/game/" },
+            { label: "AI Agents & Bots", href: "/agents/" },
+          ],
+        },
       ],
     },
     {
       label: "Developers",
-      items: [
-        { label: "SDKs & API Overview", href: "/sdk/" },
-        { label: "Architecture", href: "/architecture/" },
-        { label: "Tutorials", href: "/tutorials/" },
+      sections: [
+        {
+          items: [
+            { label: "SDKs & API Overview", href: "/sdk/" },
+            { label: "Architecture", href: "/architecture/" },
+            { label: "Tutorials", href: "/tutorials/" },
+          ],
+        },
       ],
     },
     { label: "Open Source", href: "/open-source/" },
@@ -288,26 +302,35 @@ const navCopy: Record<Lang, NavEntry[]> = {
   cn: [
     {
       label: "产品",
-      items: [
-        { label: "PrivChat Server", href: "/server/" },
-        { label: "PrivChat App", href: "/app/" },
-        { label: "PrivChat 平台", href: "/platform/" },
-      ],
-    },
-    {
-      label: "解决方案",
-      items: [
-        { label: "聊天与消息", href: "/chat/" },
-        { label: "PrivChat Game", href: "/game/" },
-        { label: "AI 智能体与机器人", href: "/agents/" },
+      sections: [
+        {
+          title: "构建与部署",
+          items: [
+            { label: "PrivChat Server", href: "/server/" },
+            { label: "PrivChat App", href: "/app/" },
+            { label: "PrivChat 平台", href: "/platform/" },
+          ],
+        },
+        {
+          title: "按场景",
+          items: [
+            { label: "聊天与消息", href: "/chat/" },
+            { label: "实时游戏", href: "/game/" },
+            { label: "AI 智能体与机器人", href: "/agents/" },
+          ],
+        },
       ],
     },
     {
       label: "开发者",
-      items: [
-        { label: "SDK 与 API 概览", href: "/sdk/" },
-        { label: "架构", href: "/architecture/" },
-        { label: "教程", href: "/tutorials/" },
+      sections: [
+        {
+          items: [
+            { label: "SDK 与 API 概览", href: "/sdk/" },
+            { label: "架构", href: "/architecture/" },
+            { label: "教程", href: "/tutorials/" },
+          ],
+        },
       ],
     },
     { label: "开源", href: "/open-source/" },
@@ -316,26 +339,35 @@ const navCopy: Record<Lang, NavEntry[]> = {
   tw: [
     {
       label: "產品",
-      items: [
-        { label: "PrivChat Server", href: "/server/" },
-        { label: "PrivChat App", href: "/app/" },
-        { label: "PrivChat 平台", href: "/platform/" },
-      ],
-    },
-    {
-      label: "解決方案",
-      items: [
-        { label: "聊天與訊息", href: "/chat/" },
-        { label: "PrivChat Game", href: "/game/" },
-        { label: "AI 代理與機器人", href: "/agents/" },
+      sections: [
+        {
+          title: "構建與部署",
+          items: [
+            { label: "PrivChat Server", href: "/server/" },
+            { label: "PrivChat App", href: "/app/" },
+            { label: "PrivChat 平台", href: "/platform/" },
+          ],
+        },
+        {
+          title: "按場景",
+          items: [
+            { label: "聊天與訊息", href: "/chat/" },
+            { label: "即時遊戲", href: "/game/" },
+            { label: "AI 代理與機器人", href: "/agents/" },
+          ],
+        },
       ],
     },
     {
       label: "開發者",
-      items: [
-        { label: "SDK 與 API 概覽", href: "/sdk/" },
-        { label: "架構", href: "/architecture/" },
-        { label: "教學", href: "/tutorials/" },
+      sections: [
+        {
+          items: [
+            { label: "SDK 與 API 概覽", href: "/sdk/" },
+            { label: "架構", href: "/architecture/" },
+            { label: "教學", href: "/tutorials/" },
+          ],
+        },
       ],
     },
     { label: "開源", href: "/open-source/" },
@@ -350,7 +382,7 @@ const headerCopy: Record<Lang, { docs: string; contact: string; openMenu: string
 };
 
 function isGroup(entry: NavEntry): entry is NavGroup {
-  return (entry as NavGroup).items !== undefined;
+  return (entry as NavGroup).sections !== undefined;
 }
 
 export function BrandMark() {
@@ -414,7 +446,7 @@ export function AppHeader({ route }: { route: Route }) {
             isGroup(entry) ? (
               <div
                 className={
-                  entry.items.some((item) => item.href === route)
+                  groupLeaves(entry).some((item) => item.href === route)
                     ? "nav-group is-active"
                     : "nav-group"
                 }
@@ -425,14 +457,19 @@ export function AppHeader({ route }: { route: Route }) {
                   <ChevronDown size={14} />
                 </button>
                 <div className="nav-dropdown">
-                  {entry.items.map((item) => (
-                    <RoutedLink
-                      className={route === item.href ? "is-active" : undefined}
-                      href={item.href}
-                      key={item.href}
-                    >
-                      {item.label}
-                    </RoutedLink>
+                  {entry.sections.map((section, si) => (
+                    <div className="nav-section" key={section.title ?? si}>
+                      {section.title ? <p className="nav-section-title">{section.title}</p> : null}
+                      {section.items.map((item) => (
+                        <RoutedLink
+                          className={route === item.href ? "is-active" : undefined}
+                          href={item.href}
+                          key={item.href}
+                        >
+                          {item.label}
+                        </RoutedLink>
+                      ))}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -474,7 +511,7 @@ export function AppHeader({ route }: { route: Route }) {
         <nav className="mobile-menu" aria-label="Mobile navigation">
           {entries.flatMap((entry) =>
             isGroup(entry)
-              ? entry.items.map((item) => (
+              ? groupLeaves(entry).map((item) => (
                   <RoutedLink href={item.href} key={item.href} onClick={close}>
                     {item.label}
                   </RoutedLink>
