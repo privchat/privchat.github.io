@@ -22,14 +22,14 @@ const T = {
       eyebrow: "Realtime games",
       title: "Bring your game engine.",
       accent: "The room mode is ready.",
-      body: "CocosCreator, Unity3D, web engines — any client that speaks the protocol can join server-authoritative game rooms: subscribe to table events, send typed actions, reconnect without losing state.",
+      body: "From card and board games to realtime matches — any engine that speaks the protocol can join server-authoritative rooms: subscribe to table events, send typed actions, reconnect without losing state. CocosCreator, Unity3D, and web engines all fit.",
       primary: "Start with the SDK",
       secondary: "See the architecture",
     },
     engines: {
       eyebrow: "Client engines",
       title: "Integrate from the engine you already use.",
-      body: "The room mode is engine-agnostic: connect over WebSocket or native transports, subscribe to the room channel, and render state your way.",
+      body: "The room mode is engine-agnostic. privchat-cocos is the reference adapter — new engine adapters extend from the same pattern over the open protocol.",
       cards: [
         {
           title: "CocosCreator",
@@ -89,14 +89,14 @@ const T = {
       eyebrow: "实时游戏",
       title: "带上你的游戏引擎，",
       accent: "房间模式已经就绪。",
-      body: "CocosCreator、Unity3D、Web 引擎 — 任何能说这套协议的客户端都可以接入服务端权威的游戏房间：订阅牌桌事件、发送强类型操作、断线重连不丢状态。",
+      body: "从棋牌到实时对战 — 任何能说这套协议的引擎都可以接入服务端权威的游戏房间：订阅牌桌事件、发送强类型操作、断线重连不丢状态。CocosCreator、Unity3D 与 Web 引擎都适用。",
       primary: "从 SDK 开始",
       secondary: "查看架构",
     },
     engines: {
       eyebrow: "客户端引擎",
       title: "用你熟悉的引擎直接对接。",
-      body: "房间模式与引擎无关：通过 WebSocket 或原生传输连接，订阅房间 Channel，渲染方式由你决定。",
+      body: "房间模式与引擎无关。privchat-cocos 是参考适配器 — 新引擎的适配都可以沿同一套模式在开放协议上扩展。",
       cards: [
         {
           title: "CocosCreator",
@@ -156,14 +156,14 @@ const T = {
       eyebrow: "即時遊戲",
       title: "帶上你的遊戲引擎，",
       accent: "房間模式已經就緒。",
-      body: "CocosCreator、Unity3D、Web 引擎 — 任何能說這套協議的客戶端都可以接入服務端權威的遊戲房間：訂閱牌桌事件、傳送強型別操作、斷線重連不丟狀態。",
+      body: "從棋牌到即時對戰 — 任何能說這套協定的引擎都可以接入伺服器端權威的遊戲房間：訂閱牌桌事件、傳送強型別操作、斷線重連不丟狀態。CocosCreator、Unity3D 與 Web 引擎都適用。",
       primary: "從 SDK 開始",
       secondary: "檢視架構",
     },
     engines: {
       eyebrow: "客戶端引擎",
       title: "用你熟悉的引擎直接對接。",
-      body: "房間模式與引擎無關：透過 WebSocket 或原生傳輸連線，訂閱房間 Channel，渲染方式由你決定。",
+      body: "房間模式與引擎無關。privchat-cocos 是參考配接器 — 新引擎的適配都可以沿同一套模式在開放協定上擴充。",
       cards: [
         {
           title: "CocosCreator",

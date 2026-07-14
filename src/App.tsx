@@ -3,6 +3,7 @@ import { LangContext, buildPath, type Route } from "./router";
 import { preferredLang } from "./i18n";
 import { AppHeader, SiteFooter, useLocation } from "./shared";
 import { AgentsPage } from "./pages/AgentsPage";
+import { AppPage } from "./pages/AppPage";
 import { ArchitecturePage } from "./pages/ArchitecturePage";
 import { ChatPage } from "./pages/ChatPage";
 import { EnterprisePage } from "./pages/EnterprisePage";
@@ -11,10 +12,15 @@ import { HomePage } from "./pages/HomePage";
 import { OpenSourcePage } from "./pages/OpenSourcePage";
 import { PlatformPage } from "./pages/PlatformPage";
 import { SdkPage } from "./pages/SdkPage";
+import { ServerPage } from "./pages/ServerPage";
 import { TutorialsPage } from "./pages/TutorialsPage";
 
 function RouteContent({ route }: { route: Route }) {
   switch (route) {
+    case "/server/":
+      return <ServerPage />;
+    case "/app/":
+      return <AppPage />;
     case "/chat/":
       return <ChatPage />;
     case "/game/":

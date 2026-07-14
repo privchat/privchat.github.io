@@ -23,6 +23,40 @@ export const SEO: Record<Route, Record<Lang, Meta>> = {
         "開源 Rust 即時通訊底座：訊息、Channel 事件與強型別 transfer RPC，執行在 QUIC、TCP 與 WebSocket 之上，部署在你自己的基礎設施上。",
     },
   },
+  "/server/": {
+    en: {
+      title: "PrivChat Server — The Rust realtime core",
+      description:
+        "One open-source server binary for messaging, channel events, and typed RPC over QUIC, TCP, and WebSocket — memory-safe Rust, server-authoritative sync, fully self-hosted.",
+    },
+    cn: {
+      title: "PrivChat Server — Rust 实时核心",
+      description:
+        "一个开源服务端二进制承载消息、Channel 事件与强类型 RPC，运行在 QUIC、TCP 与 WebSocket 上 — 内存安全的 Rust、服务端权威同步、完全自托管。",
+    },
+    tw: {
+      title: "PrivChat Server — Rust 即時核心",
+      description:
+        "一個開源伺服器二進位承載訊息、Channel 事件與強型別 RPC，執行在 QUIC、TCP 與 WebSocket 上 — 記憶體安全的 Rust、伺服器端權威同步、完全自架。",
+    },
+  },
+  "/app/": {
+    en: {
+      title: "PrivChat App — Native, H5, Mini Program & PC Web clients",
+      description:
+        "A white-label client family delivered with the Platform: native iOS/Android/HarmonyOS apps, H5, WeChat Mini Program, and a desktop-grade PC web client.",
+    },
+    cn: {
+      title: "PrivChat App — 原生、H5、小程序与 PC Web 客户端",
+      description:
+        "随 Platform 交付的白标客户端家族：iOS/Android/鸿蒙原生 App、H5、微信小程序与桌面级 PC Web 客户端。",
+    },
+    tw: {
+      title: "PrivChat App — 原生、H5、小程式與 PC Web 客戶端",
+      description:
+        "隨 Platform 交付的白牌客戶端家族：iOS/Android/鴻蒙原生 App、H5、微信小程式與桌面級 PC Web 客戶端。",
+    },
+  },
   "/chat/": {
     en: {
       title: "Chat & Messaging — PrivChat",

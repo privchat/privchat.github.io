@@ -10,6 +10,8 @@ const SITE = "https://privchat.dev";
 
 const routes = [
   "/",
+  "/server/",
+  "/app/",
   "/chat/",
   "/game/",
   "/agents/",

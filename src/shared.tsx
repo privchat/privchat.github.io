@@ -261,16 +261,16 @@ const navCopy: Record<Lang, NavEntry[]> = {
     {
       label: "Products",
       items: [
-        { label: "PrivChat Server", href: "/architecture/" },
-        { label: "SDKs", href: "/sdk/" },
+        { label: "PrivChat Server", href: "/server/" },
+        { label: "PrivChat App", href: "/app/" },
         { label: "PrivChat Platform", href: "/platform/" },
+        { label: "PrivChat Game", href: "/game/" },
       ],
     },
     {
       label: "Solutions",
       items: [
         { label: "Chat & Messaging", href: "/chat/" },
-        { label: "Realtime Games", href: "/game/" },
         { label: "AI Agents & Bots", href: "/agents/" },
       ],
     },
@@ -289,16 +289,16 @@ const navCopy: Record<Lang, NavEntry[]> = {
     {
       label: "产品",
       items: [
-        { label: "PrivChat Server", href: "/architecture/" },
-        { label: "SDK", href: "/sdk/" },
+        { label: "PrivChat Server", href: "/server/" },
+        { label: "PrivChat App", href: "/app/" },
         { label: "PrivChat 平台", href: "/platform/" },
+        { label: "PrivChat Game", href: "/game/" },
       ],
     },
     {
       label: "解决方案",
       items: [
         { label: "聊天与消息", href: "/chat/" },
-        { label: "实时游戏", href: "/game/" },
         { label: "AI 智能体与机器人", href: "/agents/" },
       ],
     },
@@ -317,16 +317,16 @@ const navCopy: Record<Lang, NavEntry[]> = {
     {
       label: "產品",
       items: [
-        { label: "PrivChat Server", href: "/architecture/" },
-        { label: "SDK", href: "/sdk/" },
+        { label: "PrivChat Server", href: "/server/" },
+        { label: "PrivChat App", href: "/app/" },
         { label: "PrivChat 平台", href: "/platform/" },
+        { label: "PrivChat Game", href: "/game/" },
       ],
     },
     {
       label: "解決方案",
       items: [
         { label: "聊天與訊息", href: "/chat/" },
-        { label: "即時遊戲", href: "/game/" },
         { label: "AI 代理與機器人", href: "/agents/" },
       ],
     },
@@ -986,16 +986,16 @@ const footerCopy: Record<
       {
         title: "Products",
         items: [
-          { label: "PrivChat Server", href: "/architecture/" },
-          { label: "SDKs", href: "/sdk/" },
+          { label: "PrivChat Server", href: "/server/" },
+          { label: "PrivChat App", href: "/app/" },
           { label: "PrivChat Platform", href: "/platform/" },
+          { label: "PrivChat Game", href: "/game/" },
         ],
       },
       {
         title: "Solutions",
         items: [
           { label: "Chat & Messaging", href: "/chat/" },
-          { label: "Realtime Games", href: "/game/" },
           { label: "AI Agents & Bots", href: "/agents/" },
         ],
       },
@@ -1024,16 +1024,16 @@ const footerCopy: Record<
       {
         title: "产品",
         items: [
-          { label: "PrivChat Server", href: "/architecture/" },
-          { label: "SDK", href: "/sdk/" },
+          { label: "PrivChat Server", href: "/server/" },
+          { label: "PrivChat App", href: "/app/" },
           { label: "PrivChat 平台", href: "/platform/" },
+          { label: "PrivChat Game", href: "/game/" },
         ],
       },
       {
         title: "解决方案",
         items: [
           { label: "聊天与消息", href: "/chat/" },
-          { label: "实时游戏", href: "/game/" },
           { label: "AI 智能体与机器人", href: "/agents/" },
         ],
       },
@@ -1062,16 +1062,16 @@ const footerCopy: Record<
       {
         title: "產品",
         items: [
-          { label: "PrivChat Server", href: "/architecture/" },
-          { label: "SDK", href: "/sdk/" },
+          { label: "PrivChat Server", href: "/server/" },
+          { label: "PrivChat App", href: "/app/" },
           { label: "PrivChat 平台", href: "/platform/" },
+          { label: "PrivChat Game", href: "/game/" },
         ],
       },
       {
         title: "解決方案",
         items: [
           { label: "聊天與訊息", href: "/chat/" },
-          { label: "即時遊戲", href: "/game/" },
           { label: "AI 代理與機器人", href: "/agents/" },
         ],
       },

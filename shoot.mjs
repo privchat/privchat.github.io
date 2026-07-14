@@ -3,6 +3,8 @@ const browser = await chromium.launch();
 
 const pages = [
   ['home', '/'],
+  ['server', '/server/'],
+  ['app', '/app/'],
   ['chat', '/chat/'],
   ['game', '/game/'],
   ['agents', '/agents/'],

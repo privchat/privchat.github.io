@@ -6,6 +6,8 @@ export const LANGS: Lang[] = ["en", "cn", "tw"];
 
 export type Route =
   | "/"
+  | "/server/"
+  | "/app/"
   | "/chat/"
   | "/game/"
   | "/agents/"
@@ -18,6 +20,8 @@ export type Route =
 
 export const routes: Route[] = [
   "/",
+  "/server/",
+  "/app/",
   "/chat/",
   "/game/",
   "/agents/",
