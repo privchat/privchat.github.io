@@ -4,16 +4,22 @@ import {
   CheckCheck,
   Code2,
   Cpu,
+  Database,
+  EyeOff,
+  Fingerprint,
   FolderUp,
   Gauge,
+  History,
   Inbox,
   KeyRound,
   Layers3,
   Lock,
+  LockKeyhole,
   MessageSquareText,
   RefreshCcw,
   Rocket,
   Server,
+  ShieldAlert,
   ShieldCheck,
   UserPlus,
   Users,
@@ -21,6 +27,7 @@ import {
 } from "lucide-react";
 import {
   ArchitectureDiagram,
+  CapabilityGrid,
   FeatureCard,
   PageCta,
   PageHero,
@@ -43,6 +50,8 @@ const CAPABILITY_ICONS = [
   BellRing,
   Gauge,
 ];
+
+const SECURITY_ICONS = [LockKeyhole, Fingerprint, History, ShieldAlert, EyeOff, Database];
 
 const T = {
   en: {
@@ -129,6 +138,37 @@ const T = {
         {
           title: "Ops & integration",
           tags: ["Prometheus /metrics", "Health checks", "Admin service API", "Server-event dispatch", "Embedded migrations", "Graceful shutdown & Docker"],
+        },
+      ],
+    },
+    security: {
+      eyebrow: "Security & trust",
+      title: "Security is the starting point, not a checkbox.",
+      body: "From transport to credentials to abuse protection, the mechanisms below are built into the server itself. End-to-end encryption (Signal-protocol direction) is on the public roadmap — stated here honestly, not oversold.",
+      groups: [
+        {
+          title: "Transport encryption",
+          tags: ["TLS 1.3 native to QUIC", "WebSocket over wss", "Your own certificates", "No third-party relay"],
+        },
+        {
+          title: "Auth & credentials",
+          tags: ["RS256 signing + JWKS", "Access + refresh tokens", "Token revocation", "bcrypt password hashing", "Service-to-service keys"],
+        },
+        {
+          title: "Tamper-proof by design",
+          tags: ["No message editing — by design", "Stops edit-based address scams", "2-minute revoke + resend", "Visible revoke marker", "Server-authoritative message ids"],
+        },
+        {
+          title: "Abuse protection",
+          tags: ["Four-stage enforcement state machine", "Trust-based dynamic throttling", "User / RPC / session / group rate limits", "Fan-out cost accounting", "Shadow ban", "Observe-first rollout"],
+        },
+        {
+          title: "Privacy controls",
+          tags: ["Privacy settings", "Source verification", "Non-friend message control", "Blacklist", "IP protection"],
+        },
+        {
+          title: "Data sovereignty",
+          tags: ["Fully self-hosted", "No phone-home", "Your database, storage & keys", "S3-compatible private storage"],
         },
       ],
     },
@@ -231,6 +271,37 @@ const T = {
         },
       ],
     },
+    security: {
+      eyebrow: "安全与信任",
+      title: "安全不是清单项，是设计原点。",
+      body: "从传输、凭证到滥用防护，以下机制内建在服务端本体。端到端加密（Signal 协议方向）在公开路线图中 — 如实标注，不夸大。",
+      groups: [
+        {
+          title: "传输加密",
+          tags: ["QUIC 原生 TLS 1.3", "WebSocket over wss", "证书自持", "无第三方中转"],
+        },
+        {
+          title: "认证与凭证",
+          tags: ["RS256 签名 + JWKS", "access + refresh 双 token", "token 撤销", "bcrypt 密码散列", "服务间认证密钥"],
+        },
+        {
+          title: "防篡改设计",
+          tags: ["不做消息编辑 — 设计决策", "杜绝改地址式诈骗", "2 分钟撤回 + 重发", "撤回留系统提示", "服务端权威消息 ID"],
+        },
+        {
+          title: "滥用防护",
+          tags: ["四级处置状态机", "信任度动态限流", "用户 / RPC / 会话 / 群组四维限流", "大群 fan-out 成本核算", "Shadow Ban", "先观察后执法的分阶段启用"],
+        },
+        {
+          title: "隐私管控",
+          tags: ["隐私设置", "来源验证", "非好友消息管控", "黑名单", "IP 防护"],
+        },
+        {
+          title: "数据主权",
+          tags: ["完全自托管", "不回传任何数据", "数据库 / 存储 / 密钥全在你手里", "S3 兼容私有存储"],
+        },
+      ],
+    },
     arch: {
       eyebrow: "它的位置",
       title: "所有产品面之下的那个底座。",
@@ -330,6 +401,37 @@ const T = {
         },
       ],
     },
+    security: {
+      eyebrow: "安全與信任",
+      title: "安全不是清單項，是設計原點。",
+      body: "從傳輸、憑證到濫用防護，以下機制內建在伺服器本體。端對端加密（Signal 協定方向）在公開路線圖中 — 如實標註，不誇大。",
+      groups: [
+        {
+          title: "傳輸加密",
+          tags: ["QUIC 原生 TLS 1.3", "WebSocket over wss", "憑證自持", "無第三方中轉"],
+        },
+        {
+          title: "認證與憑證",
+          tags: ["RS256 簽章 + JWKS", "access + refresh 雙 token", "token 撤銷", "bcrypt 密碼雜湊", "服務間認證金鑰"],
+        },
+        {
+          title: "防篡改設計",
+          tags: ["不做訊息編輯 — 設計決策", "杜絕改地址式詐騙", "2 分鐘撤回 + 重發", "撤回留系統提示", "伺服器端權威訊息 ID"],
+        },
+        {
+          title: "濫用防護",
+          tags: ["四級處置狀態機", "信任度動態限流", "使用者 / RPC / 連線 / 群組四維限流", "大群 fan-out 成本核算", "Shadow Ban", "先觀察後執法的分階段啟用"],
+        },
+        {
+          title: "隱私管控",
+          tags: ["隱私設定", "來源驗證", "非好友訊息管控", "黑名單", "IP 防護"],
+        },
+        {
+          title: "資料主權",
+          tags: ["完全自架", "不回傳任何資料", "資料庫 / 儲存 / 金鑰全在你手裡", "S3 相容私有儲存"],
+        },
+      ],
+    },
     arch: {
       eyebrow: "它的位置",
       title: "所有產品面之下的那個底座。",
@@ -382,29 +484,21 @@ export function ServerPage() {
           </div>
           <p>{t.capabilities.body}</p>
         </div>
-        <div className="container feature-grid capability-grid">
-          {t.capabilities.groups.map((group, i) => {
-            const Icon = CAPABILITY_ICONS[i];
-            return (
-              <article className="capability-card" key={group.title}>
-                <div className="capability-head">
-                  <span className="feature-icon">
-                    <Icon size={20} />
-                  </span>
-                  <h3>{group.title}</h3>
-                </div>
-                <div className="capability-tags">
-                  {group.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-              </article>
-            );
-          })}
-        </div>
+        <CapabilityGrid groups={t.capabilities.groups} icons={CAPABILITY_ICONS} />
       </section>
 
       <section className="section">
+        <div className="container split-heading">
+          <div>
+            <SectionEyebrow>{t.security.eyebrow}</SectionEyebrow>
+            <h2>{t.security.title}</h2>
+          </div>
+          <p>{t.security.body}</p>
+        </div>
+        <CapabilityGrid groups={t.security.groups} icons={SECURITY_ICONS} />
+      </section>
+
+      <section className="section section-deep">
         <div className="container split-heading">
           <div>
             <SectionEyebrow>{t.arch.eyebrow}</SectionEyebrow>

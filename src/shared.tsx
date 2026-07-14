@@ -552,6 +552,33 @@ export function FeatureCard({ item }: { item: Feature }) {
   return <article className="feature-card">{body}</article>;
 }
 
+export type CapabilityGroup = { title: string; tags: string[] };
+
+export function CapabilityGrid({ groups, icons }: { groups: CapabilityGroup[]; icons: LucideIcon[] }) {
+  return (
+    <div className="container feature-grid capability-grid">
+      {groups.map((group, i) => {
+        const Icon = icons[i];
+        return (
+          <article className="capability-card" key={group.title}>
+            <div className="capability-head">
+              <span className="feature-icon" aria-hidden="true">
+                <Icon size={20} />
+              </span>
+              <h3>{group.title}</h3>
+            </div>
+            <div className="capability-tags">
+              {group.tags.map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  );
+}
+
 export function PageHero({
   eyebrow,
   title,
