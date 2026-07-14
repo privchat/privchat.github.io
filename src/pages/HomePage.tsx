@@ -102,7 +102,7 @@ const T = {
     community: {
       eyebrow: "Open source",
       title: "Built in the open.",
-      body: "Quickstarts, examples, the roadmap, and contribution guides all live on GitHub. Star the repo, open issues, and help shape the protocol.",
+      body: "Examples, the roadmap, and contribution guides all live on GitHub. Star the repo, open issues, and help shape the protocol.",
       tutorials: "Tutorials",
       community: "Community",
     },
@@ -181,7 +181,7 @@ const T = {
     community: {
       eyebrow: "开源",
       title: "在开放中构建。",
-      body: "快速上手、示例、路线图与贡献指南都在 GitHub。给仓库加星、提 issue，一起塑造这套协议。",
+      body: "示例、路线图与贡献指南都在 GitHub。给仓库加星、提 issue，一起塑造这套协议。",
       tutorials: "教程",
       community: "社区",
     },
@@ -260,7 +260,7 @@ const T = {
     community: {
       eyebrow: "開源",
       title: "在開放中構建。",
-      body: "快速上手、示例、路線圖與貢獻指南都在 GitHub。給倉庫加星、提 issue，一起塑造這套協議。",
+      body: "示例、路線圖與貢獻指南都在 GitHub。給倉庫加星、提 issue，一起塑造這套協定。",
       tutorials: "教程",
       community: "社群",
     },

@@ -6,10 +6,10 @@ const T = {
   en: {
     hero: {
       eyebrow: "Developer tutorials",
-      title: "Start from a working path,",
+      title: "Start from the right path,",
       accent: "then go deeper.",
       body: "Runnable, goal-based guides are on the way. Until they land, each path below takes you to the right repository README to start from.",
-      primary: "Run quickstart",
+      primary: "Explore the API overview",
       secondary: "Explore chat",
     },
     start: {
@@ -47,10 +47,10 @@ const T = {
   cn: {
     hero: {
       eyebrow: "开发者教程",
-      title: "从一条能跑通的路径开始，",
+      title: "从正确的路径开始，",
       accent: "再逐步深入。",
       body: "可运行的目标导向指南正在路上。在它们落地之前，下面每条路径都指向对应仓库的 README，从那里开始。",
-      primary: "运行快速上手",
+      primary: "浏览 API 概览",
       secondary: "了解聊天",
     },
     start: {
@@ -88,10 +88,10 @@ const T = {
   tw: {
     hero: {
       eyebrow: "開發者教程",
-      title: "從一條能跑通的路徑開始，",
+      title: "從正確的路徑開始，",
       accent: "再逐步深入。",
       body: "可執行的目標導向指南正在路上。在它們落地之前，下面每條路徑都指向對應儲存庫的 README，從那裡開始。",
-      primary: "執行快速上手",
+      primary: "瀏覽 API 概覽",
       secondary: "瞭解聊天",
     },
     start: {

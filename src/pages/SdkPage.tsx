@@ -7,7 +7,7 @@ const SDK_ICONS = [Terminal, Code2, Cpu];
 const T = {
   en: {
     hero: {
-      eyebrow: "SDKs & quickstart",
+      eyebrow: "SDKs & API overview",
       title: "One wire protocol.",
       accent: "Three first-class SDKs.",
       body: "Rust is the reference engine; Kotlin shares it natively through UniFFI, and TypeScript is an idiomatic WebSocket implementation. All SDKs implement the same wire protocol, with cross-language codec fixtures.",
@@ -90,7 +90,7 @@ const T = {
   },
   cn: {
     hero: {
-      eyebrow: "SDK 与快速上手",
+      eyebrow: "SDK 与 API 概览",
       title: "一套线上协议，",
       accent: "三个一等 SDK。",
       body: "Rust 是参考引擎；Kotlin 通过 UniFFI 原生共享它，TypeScript 则是地道的 WebSocket 实现。三个 SDK 实现同一套线上协议，并共享跨语言编解码测试夹具。",
@@ -161,7 +161,7 @@ const T = {
   },
   tw: {
     hero: {
-      eyebrow: "SDK 與快速上手",
+      eyebrow: "SDK 與 API 概覽",
       title: "一套線上協定，",
       accent: "三個一等 SDK。",
       body: "Rust 是參考引擎；Kotlin 透過 UniFFI 原生共享它，TypeScript 則是道地的 WebSocket 實作。三個 SDK 實作同一套線上協定，並共享跨語言編解碼測試夾具。",

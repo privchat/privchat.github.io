@@ -80,7 +80,7 @@ const T = {
     cta: {
       eyebrow: "Ship your game",
       title: "Bring the loop. The wire is solved.",
-      body: "Start with the SDK quickstart, then talk to us about room orchestration and going live.",
+      body: "Review the SDK API overview, then talk to us about room orchestration and going live.",
       action: "Start building",
     },
   },
@@ -147,7 +147,7 @@ const T = {
     cta: {
       eyebrow: "发布你的游戏",
       title: "带上游戏逻辑，通信已经解决。",
-      body: "先跑通 SDK 快速上手，再和我们聊房间编排与上线。",
+      body: "先浏览 SDK API 概览，再和我们聊房间编排与上线。",
       action: "开始构建",
     },
   },
@@ -214,7 +214,7 @@ const T = {
     cta: {
       eyebrow: "釋出你的遊戲",
       title: "帶上游戲邏輯，通訊已經解決。",
-      body: "先跑通 SDK 快速上手，再和我們聊房間編排與上線。",
+      body: "先瀏覽 SDK API 概覽，再和我們聊房間編排與上線。",
       action: "開始構建",
     },
   },

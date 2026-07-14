@@ -277,7 +277,7 @@ const navCopy: Record<Lang, NavEntry[]> = {
     {
       label: "Developers",
       items: [
-        { label: "SDKs & Quickstart", href: "/sdk/" },
+        { label: "SDKs & API Overview", href: "/sdk/" },
         { label: "Architecture", href: "/architecture/" },
         { label: "Tutorials", href: "/tutorials/" },
       ],
@@ -305,7 +305,7 @@ const navCopy: Record<Lang, NavEntry[]> = {
     {
       label: "开发者",
       items: [
-        { label: "SDK 与快速上手", href: "/sdk/" },
+        { label: "SDK 与 API 概览", href: "/sdk/" },
         { label: "架构", href: "/architecture/" },
         { label: "教程", href: "/tutorials/" },
       ],
@@ -333,7 +333,7 @@ const navCopy: Record<Lang, NavEntry[]> = {
     {
       label: "開發者",
       items: [
-        { label: "SDK 與快速上手", href: "/sdk/" },
+        { label: "SDK 與 API 概覽", href: "/sdk/" },
         { label: "架構", href: "/architecture/" },
         { label: "教學", href: "/tutorials/" },
       ],
@@ -1002,7 +1002,7 @@ const footerCopy: Record<
       {
         title: "Developers",
         items: [
-          { label: "SDKs & Quickstart", href: "/sdk/" },
+          { label: "SDKs & API Overview", href: "/sdk/" },
           { label: "Architecture", href: "/architecture/" },
           { label: "Tutorials", href: "/tutorials/" },
         ],
@@ -1040,7 +1040,7 @@ const footerCopy: Record<
       {
         title: "开发者",
         items: [
-          { label: "SDK 与快速上手", href: "/sdk/" },
+          { label: "SDK 与 API 概览", href: "/sdk/" },
           { label: "架构", href: "/architecture/" },
           { label: "教程", href: "/tutorials/" },
         ],
@@ -1078,7 +1078,7 @@ const footerCopy: Record<
       {
         title: "開發者",
         items: [
-          { label: "SDK 與快速上手", href: "/sdk/" },
+          { label: "SDK 與 API 概覽", href: "/sdk/" },
           { label: "架構", href: "/architecture/" },
           { label: "教學", href: "/tutorials/" },
         ],
