@@ -196,7 +196,7 @@ export const quickstartTabs: CodeTab[] = [
     id: "typescript",
     label: "TypeScript",
     icon: Code2,
-    install: "npm install @privchat/sdk @msgtrans/client",
+    install: "git clone https://github.com/privchat/privchat-sdk-typescript   # npm package coming soon",
     code: `import { PrivchatClient } from "@privchat/sdk";
 
 const client = new PrivchatClient({
@@ -215,16 +215,16 @@ client.onPushMessage((message) => {
     id: "rust",
     label: "Rust",
     icon: Terminal,
-    install: "cargo add privchat-sdk",
-    code: `use privchat_sdk::PrivchatClient;
+    install: "git clone https://github.com/privchat/privchat-sdk   # crates.io release coming soon",
+    code: `use privchat_sdk::{PrivchatConfig, PrivchatSdk};
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let client = PrivchatClient::new(Default::default()).await?;
+    let sdk = PrivchatSdk::new(PrivchatConfig::default());
 
-    client.connect().await?;
-    client.authenticate(user_id, token, device_id).await?;
-    client.subscribe_channel("900710001", 1, None).await?;
+    sdk.connect().await?;
+    sdk.authenticate(user_id, token, device_id).await?;
+    sdk.subscribe_channel(900710001, 1, None).await?;
 
     Ok(())
 }`,
@@ -233,20 +233,20 @@ async fn main() -> anyhow::Result<()> {
     id: "kotlin",
     label: "Kotlin",
     icon: Cpu,
-    install: "implementation(\"com.netonstream.privchat:sdk:0.1.0\")",
-    code: `val client = PrivchatClient.create()
+    install: "git clone https://github.com/privchat/privchat-sdk-kotlin   # Maven artifact coming soon",
+    code: `val client = PrivchatClient.create(
+    PrivchatConfig(
+        dataDir = "./privchat-data",
+        serverEndpoints = listOf(
+            ServerEndpoint(TransportProtocol.WebSocket, "im.example.com", 9080),
+        ),
+    ),
+).getOrThrow()
 
-client.connect()
-client.authenticate(
-    userId = userId,
-    token = accessToken,
-    deviceId = deviceId,
-)
+client.connect().getOrThrow()
+client.authenticate(userId, accessToken, deviceId).getOrThrow()
 
-client.subscribeChannel(
-    channelId = "900710001",
-    channelType = 1,
-)`,
+client.subscribeChannel(channelId = 900710001u, channelType = 1u, token = null)`,
   },
 ];
 

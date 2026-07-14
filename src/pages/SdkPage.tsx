@@ -53,7 +53,7 @@ const T = {
           items: [
             "Auto-reconnect",
             "Token refresh flow",
-            "Multi-transport failover",
+            "Multi-transport via Rust core (WS on web)",
             "Connection state machine",
             "End-to-end heartbeat",
           ],
@@ -133,7 +133,7 @@ const T = {
         },
         {
           title: "连接",
-          items: ["自动重连", "令牌刷新流程", "多传输故障切换", "连接状态机", "端到端心跳"],
+          items: ["自动重连", "令牌刷新流程", "多传输（Rust 内核；Web 端为 WS）", "连接状态机", "端到端心跳"],
         },
         {
           title: "数据",
@@ -204,7 +204,7 @@ const T = {
         },
         {
           title: "連線",
-          items: ["自動重連", "令牌重新整理流程", "多傳輸故障切換", "連線狀態機", "端到端心跳"],
+          items: ["自動重連", "令牌重新整理流程", "多傳輸（Rust 核心；Web 端為 WS）", "連線狀態機", "端到端心跳"],
         },
         {
           title: "資料",
