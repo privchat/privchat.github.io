@@ -129,15 +129,15 @@ export const SEO: Record<Route, Record<Lang, Meta>> = {
     en: {
       title: "Tutorials — PrivChat",
       description:
-        "Goal-based guides: run the server, connect an SDK, send your first message, and learn the protocol architecture.",
+        "Guide paths into the PrivChat stack — server, SDKs, and protocol — starting from the repository READMEs. Full written tutorials are on the way.",
     },
     cn: {
       title: "教程 — PrivChat",
-      description: "目标导向指南：跑起服务端、连接 SDK、发出第一条消息，并理解协议架构。",
+      description: "进入 PrivChat 技术栈的指南路径 — 服务端、SDK 与协议，从仓库 README 开始。完整图文教程即将上线。",
     },
     tw: {
       title: "教學 — PrivChat",
-      description: "目標導向指南：跑起伺服器、連接 SDK、發出第一則訊息，並理解協定架構。",
+      description: "進入 PrivChat 技術棧的指南路徑 — 伺服器、SDK 與協定，從儲存庫 README 開始。完整圖文教學即將上線。",
     },
   },
   "/open-source/": {

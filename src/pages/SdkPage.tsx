@@ -10,7 +10,7 @@ const T = {
       eyebrow: "SDKs & quickstart",
       title: "One wire protocol.",
       accent: "Three first-class SDKs.",
-      body: "Rust is the reference engine; Kotlin shares it natively through UniFFI, and TypeScript is an idiomatic WebSocket implementation of the same protocol — all verified against the same server behavior.",
+      body: "Rust is the reference engine; Kotlin shares it natively through UniFFI, and TypeScript is an idiomatic WebSocket implementation. All SDKs implement the same wire protocol, with cross-language codec fixtures.",
       primary: "Read tutorials",
       secondary: "See the architecture",
     },
@@ -35,7 +35,7 @@ const T = {
     },
     matrix: {
       eyebrow: "Capability matrix",
-      title: "What every SDK gives you out of the box.",
+      title: "Capabilities across the current SDK family.",
       body: "These are shipped capabilities, not a wishlist — the roadmap strip below is where future tracks live until they are real.",
       columns: [
         {
@@ -83,8 +83,8 @@ const T = {
     },
     cta: {
       eyebrow: "Next step",
-      title: "Run the first tutorial end to end.",
-      body: "Install, connect, authenticate, subscribe — a working message in one sitting, on your own server.",
+      title: "Start from the guide paths and repositories.",
+      body: "Follow the guide paths into each repository — server, SDKs, and protocol — and build from the READMEs.",
       action: "Open tutorials",
     },
   },
@@ -93,7 +93,7 @@ const T = {
       eyebrow: "SDK 与快速上手",
       title: "一套线上协议，",
       accent: "三个一等 SDK。",
-      body: "Rust 是参考引擎；Kotlin 通过 UniFFI 原生共享它，TypeScript 则是同一协议的地道 WebSocket 实现 — 三者对照同一套服务端行为验证。",
+      body: "Rust 是参考引擎；Kotlin 通过 UniFFI 原生共享它，TypeScript 则是地道的 WebSocket 实现。三个 SDK 实现同一套线上协议，并共享跨语言编解码测试夹具。",
       primary: "阅读教程",
       secondary: "查看架构",
     },
@@ -118,7 +118,7 @@ const T = {
     },
     matrix: {
       eyebrow: "能力矩阵",
-      title: "每个 SDK 开箱即用的能力。",
+      title: "当前 SDK 家族的能力全景。",
       body: "这些是已交付的能力，不是愿望清单 — 未来的轨道在下方路线图条里，直到成真为止。",
       columns: [
         {
@@ -154,8 +154,8 @@ const T = {
     },
     cta: {
       eyebrow: "下一步",
-      title: "端到端跑通第一个教程。",
-      body: "安装、连接、鉴权、订阅 — 一次就把消息跑通，在你自己的服务器上。",
+      title: "从指南路径与仓库开始。",
+      body: "沿指南路径进入各个仓库 — 服务端、SDK 与协议 — 从 README 开始构建。",
       action: "打开教程",
     },
   },
@@ -164,7 +164,7 @@ const T = {
       eyebrow: "SDK 與快速上手",
       title: "一套線上協定，",
       accent: "三個一等 SDK。",
-      body: "Rust 是參考引擎；Kotlin 透過 UniFFI 原生共享它，TypeScript 則是同一協定的道地 WebSocket 實作 — 三者對照同一套伺服器行為驗證。",
+      body: "Rust 是參考引擎；Kotlin 透過 UniFFI 原生共享它，TypeScript 則是道地的 WebSocket 實作。三個 SDK 實作同一套線上協定，並共享跨語言編解碼測試夾具。",
       primary: "閱讀教程",
       secondary: "檢視架構",
     },
@@ -189,7 +189,7 @@ const T = {
     },
     matrix: {
       eyebrow: "能力矩陣",
-      title: "每個 SDK 開箱即用的能力。",
+      title: "當前 SDK 家族的能力全景。",
       body: "這些是已交付的能力，不是願望清單 — 未來的軌道在下方路線圖條裡，直到成真為止。",
       columns: [
         {
@@ -225,8 +225,8 @@ const T = {
     },
     cta: {
       eyebrow: "下一步",
-      title: "端到端跑通第一個教程。",
-      body: "安裝、連線、鑑權、訂閱 — 一次就把訊息跑通，在你自己的伺服器上。",
+      title: "從指南路徑與儲存庫開始。",
+      body: "沿指南路徑進入各個儲存庫 — 伺服器、SDK 與協定 — 從 README 開始建置。",
       action: "開啟教程",
     },
   },

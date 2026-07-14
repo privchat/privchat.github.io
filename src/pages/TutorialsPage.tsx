@@ -8,14 +8,14 @@ const T = {
       eyebrow: "Developer tutorials",
       title: "Start from a working path,",
       accent: "then go deeper.",
-      body: "Use short, goal-based guides to run the server, connect SDKs, send your first message, and understand the protocol architecture.",
+      body: "Runnable, goal-based guides are on the way. Until they land, each path below takes you to the right repository README to start from.",
       primary: "Run quickstart",
       secondary: "Explore chat",
     },
     start: {
       eyebrow: "Start here",
       title: "Choose the path that matches your build stage.",
-      body: "These are intentionally practical. Each guide should end with a working connection, a message, or a deployable server step.",
+      body: "Three paths into the stack. Each card links to the repository that owns that path — the full written guides will land here.",
       cards: [
         {
           step: "01",
@@ -49,14 +49,14 @@ const T = {
       eyebrow: "开发者教程",
       title: "从一条能跑通的路径开始，",
       accent: "再逐步深入。",
-      body: "用短小的目标导向指南跑起服务端、连接 SDK、发出第一条消息，并理解协议架构。",
+      body: "可运行的目标导向指南正在路上。在它们落地之前，下面每条路径都指向对应仓库的 README，从那里开始。",
       primary: "运行快速上手",
       secondary: "了解聊天",
     },
     start: {
       eyebrow: "从这里开始",
       title: "选择匹配你构建阶段的路径。",
-      body: "这些指南刻意保持实用：每篇的终点都是一条可用的连接、一条消息，或一个可部署的服务端步骤。",
+      body: "进入这套栈的三条路径。每张卡片链向该路径所属的仓库 — 完整的图文指南将落在本页。",
       cards: [
         {
           step: "01",
@@ -90,14 +90,14 @@ const T = {
       eyebrow: "開發者教程",
       title: "從一條能跑通的路徑開始，",
       accent: "再逐步深入。",
-      body: "用短小的目標導向指南跑起服務端、連線 SDK、發出第一條訊息，並理解協議架構。",
+      body: "可執行的目標導向指南正在路上。在它們落地之前，下面每條路徑都指向對應儲存庫的 README，從那裡開始。",
       primary: "執行快速上手",
       secondary: "瞭解聊天",
     },
     start: {
       eyebrow: "從這裡開始",
       title: "選擇匹配你構建階段的路徑。",
-      body: "這些指南刻意保持實用：每篇的終點都是一條可用的連線、一條訊息，或一個可部署的服務端步驟。",
+      body: "進入這套棧的三條路徑。每張卡片鏈向該路徑所屬的儲存庫 — 完整的圖文指南將落在本頁。",
       cards: [
         {
           step: "01",

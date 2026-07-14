@@ -215,7 +215,7 @@ client.onPushMessage((message) => {
     id: "rust",
     label: "Rust",
     icon: Terminal,
-    install: "cargo add privchat-sdk",
+    install: "cargo add privchat-sdk tokio anyhow",
     code: `use privchat_sdk::{PrivchatConfig, PrivchatSdk};
 
 #[tokio::main]
@@ -718,28 +718,28 @@ const quickstartCopy = {
   en: {
     eyebrow: "Developer experience",
     title: "Connect, authenticate, subscribe — the core loop.",
-    body: "Install the SDK, connect, authenticate, subscribe, receive. Pick your language — every public snippet is verified against the real repositories before release.",
+    body: "The snippets below show the real API shapes: connect, authenticate, subscribe. For a full build, start from each repository README.",
     bodyCompact:
-      "Install, connect, authenticate, subscribe, receive — then dive into the SDK pages for the full surface.",
-    quickstart: "quickstart",
+      "Connect, authenticate, subscribe — the real API shapes at a glance; dive into the SDK pages for the full surface.",
+    quickstart: "API overview",
     copy: "Copy",
     copied: "Copied",
   },
   cn: {
     eyebrow: "开发者体验",
     title: "连接、鉴权、订阅 — 核心流程就这三步。",
-    body: "安装 SDK、连接、鉴权、订阅、接收。选择你的语言 — 所有公开示例在发布前都对照真实仓库验证。",
-    bodyCompact: "安装、连接、鉴权、订阅、接收 — 更完整的能力请进入 SDK 页面。",
-    quickstart: "快速上手",
+    body: "下方代码展示真实的 API 形状：连接、鉴权、订阅。完整构建请从各仓库 README 开始。",
+    bodyCompact: "连接、鉴权、订阅 — 一眼看到真实 API 形状；更完整的能力请进入 SDK 页面。",
+    quickstart: "API 概览",
     copy: "复制",
     copied: "已复制",
   },
   tw: {
     eyebrow: "開發者體驗",
     title: "連線、驗證、訂閱 — 核心流程就這三步。",
-    body: "安裝 SDK、連線、驗證、訂閱、接收。選擇你的語言 — 所有公開範例在發布前都對照真實儲存庫驗證。",
-    bodyCompact: "安裝、連線、驗證、訂閱、接收 — 更完整的能力請進入 SDK 頁面。",
-    quickstart: "快速上手",
+    body: "下方程式碼展示真實的 API 形狀：連線、驗證、訂閱。完整建置請從各儲存庫 README 開始。",
+    bodyCompact: "連線、驗證、訂閱 — 一眼看到真實 API 形狀；更完整的能力請進入 SDK 頁面。",
+    quickstart: "API 概覽",
     copy: "複製",
     copied: "已複製",
   },
