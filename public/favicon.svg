@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PrivChat">
+  <rect width="64" height="64" rx="14" fill="#101828"/>
+  <path d="M19 36.5V27c0-4.4 3.6-8 8-8h10c4.4 0 8 3.6 8 8v5c0 4.4-3.6 8-8 8h-6.4l-7.2 5.4c-1.3 1-3.2.1-3.2-1.6v-7.3H19Z" fill="#8BE8FF"/>
+  <path d="M26 29.5h12M26 35h7" stroke="#101828" stroke-width="4" stroke-linecap="round"/>
+</svg>
