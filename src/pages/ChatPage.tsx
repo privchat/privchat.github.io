@@ -49,6 +49,12 @@ const CAPABILITY_ICONS = [
   Wallet,
 ];
 
+const CAPABILITY_BANDS = [
+  { start: 0, end: 9, tone: "open" },
+  { start: 9, end: 11, tone: "app" },
+  { start: 11, end: 12, tone: "platform" },
+] as const;
+
 const T = {
   en: {
     hero: {
@@ -88,9 +94,26 @@ const T = {
       ],
     },
     capabilities: {
-      eyebrow: "The full feature surface",
-      title: "Everything the chat scenario ships with.",
-      body: "This is the single authoritative feature list for the whole line: messaging, groups, and sync come from the open-source server; media, QR, and personalization from the app family; the commercial extensions ship with the Platform.",
+      eyebrow: "Capability map",
+      title: "See what ships with each path.",
+      body: "The detailed user-facing capability inventory for the chat solution, organized by the product that delivers it.",
+      bands: [
+        {
+          title: "Open-source messaging core",
+          badge: "Included with Server + SDK",
+          body: "Self-host the realtime backbone and integrate it into your product. These messaging capabilities stay open source.",
+        },
+        {
+          title: "Ready-to-ship client experience",
+          badge: "With PrivChat App · Commercial",
+          body: "Product surfaces and client-side experiences delivered as part of the white-label app family.",
+        },
+        {
+          title: "Business extensions",
+          badge: "With PrivChat Platform · Commercial",
+          body: "Commercial application modules for money movement, engagement, and business workflows.",
+        },
+      ],
       groups: [
         {
           title: "Messaging",
@@ -122,11 +145,11 @@ const T = {
         },
         {
           title: "Files & media",
-          tags: ["Upload tokens & validation", "HTTP upload/download", "Local + S3-compatible backends", "Thumbnails (SDK)"],
+          tags: ["Image / audio / video / files", "Upload & download", "Media preview", "SDK thumbnails"],
         },
         {
           title: "Notifications & push",
-          tags: ["Friend & group event notices", "System notifications", "APNS / FCM / Huawei HMS", "Xiaomi / OPPO / vivo / Honor & more"],
+          tags: ["Offline alerts", "Friend & group event notices", "System notifications", "Multi-vendor mobile delivery"],
         },
         {
           title: "QR codes & sharing",
@@ -145,7 +168,7 @@ const T = {
     parts: {
       eyebrow: "Who does what",
       title: "Four parts, one backbone.",
-      body: "Feature lists live above on this page; the product pages focus on each part's strengths — the server on architecture, security, and operations, the app on delivery.",
+      body: "The detailed chat capability inventory lives above; the product pages focus on each part's strengths — the server on architecture, security, and operations, the app on delivery.",
       cards: [
         {
           title: "PrivChat Server",
@@ -216,9 +239,26 @@ const T = {
       ],
     },
     capabilities: {
-      eyebrow: "完整功能面",
-      title: "聊天场景开箱即有的一切。",
-      body: "这是全产品线唯一的权威功能清单：消息、群组与同步来自开源服务端；媒体、二维码与个性化来自 App 家族；商业扩展随 Platform 交付。",
+      eyebrow: "能力地图",
+      title: "看清每条路径分别交付什么。",
+      body: "聊天解决方案的用户向功能明细，按实际交付这些能力的产品分层展示。",
+      bands: [
+        {
+          title: "开源消息核心",
+          badge: "Server + SDK 已包含",
+          body: "自托管实时底座并集成进你的产品；这一层的消息能力保持开源。",
+        },
+        {
+          title: "可直接交付的客户端体验",
+          badge: "随 PrivChat App · 商业",
+          body: "作为白标客户端家族交付的产品界面与客户端体验能力。",
+        },
+        {
+          title: "业务扩展",
+          badge: "随 PrivChat Platform · 商业",
+          body: "面向资金流转、用户运营与业务流程的商业应用模块。",
+        },
+      ],
       groups: [
         {
           title: "消息",
@@ -250,11 +290,11 @@ const T = {
         },
         {
           title: "文件与媒体",
-          tags: ["上传 token 与校验", "HTTP 上传下载", "本地 + S3 兼容多后端", "缩略图（SDK）"],
+          tags: ["图片 / 音频 / 视频 / 文件", "上传与下载", "媒体预览", "SDK 缩略图"],
         },
         {
           title: "通知与推送",
-          tags: ["好友/群事件通知", "系统通知", "APNS / FCM / 华为 HMS", "小米 / OPPO / vivo / 荣耀 等"],
+          tags: ["离线提醒", "好友/群事件通知", "系统通知", "多厂商移动推送"],
         },
         {
           title: "二维码与分享",
@@ -273,7 +313,7 @@ const T = {
     parts: {
       eyebrow: "各自的职责",
       title: "四个部件，一个底座。",
-      body: "功能清单就在本页上方；产品页各自聚焦优势 — 服务端讲架构、安全与运维，App 讲交付。",
+      body: "聊天能力明细就在本页上方；产品页各自聚焦优势 — 服务端讲架构、安全与运维，App 讲交付。",
       cards: [
         {
           title: "PrivChat Server",
@@ -344,9 +384,26 @@ const T = {
       ],
     },
     capabilities: {
-      eyebrow: "完整功能面",
-      title: "聊天場景開箱即有的一切。",
-      body: "這是全產品線唯一的權威功能清單：訊息、群組與同步來自開源伺服器；媒體、QR Code 與個人化來自 App 家族；商業擴充隨 Platform 交付。",
+      eyebrow: "能力地圖",
+      title: "看清每條路徑分別交付什麼。",
+      body: "聊天解決方案的使用者向功能明細，按實際交付這些能力的產品分層展示。",
+      bands: [
+        {
+          title: "開源訊息核心",
+          badge: "Server + SDK 已包含",
+          body: "自架即時底座並整合進你的產品；這一層的訊息能力保持開源。",
+        },
+        {
+          title: "可直接交付的客戶端體驗",
+          badge: "隨 PrivChat App · 商業",
+          body: "作為白牌客戶端家族交付的產品介面與客戶端體驗能力。",
+        },
+        {
+          title: "業務擴充",
+          badge: "隨 PrivChat Platform · 商業",
+          body: "面向資金流轉、使用者營運與業務流程的商業應用模組。",
+        },
+      ],
       groups: [
         {
           title: "訊息",
@@ -378,11 +435,11 @@ const T = {
         },
         {
           title: "檔案與媒體",
-          tags: ["上傳 token 與校驗", "HTTP 上傳下載", "本地 + S3 相容多後端", "縮圖（SDK）"],
+          tags: ["圖片 / 音訊 / 影片 / 檔案", "上傳與下載", "媒體預覽", "SDK 縮圖"],
         },
         {
           title: "通知與推送",
-          tags: ["好友/群組事件通知", "系統通知", "APNS / FCM / 華為 HMS", "小米 / OPPO / vivo / 榮耀 等"],
+          tags: ["離線提醒", "好友/群組事件通知", "系統通知", "多廠商行動推送"],
         },
         {
           title: "QR Code 與分享",
@@ -401,7 +458,7 @@ const T = {
     parts: {
       eyebrow: "各自的職責",
       title: "四個部件，一個底座。",
-      body: "功能清單就在本頁上方；產品頁各自聚焦優勢 — 伺服器講架構、安全與維運，App 講交付。",
+      body: "聊天能力明細就在本頁上方；產品頁各自聚焦優勢 — 伺服器講架構、安全與維運，App 講交付。",
       cards: [
         {
           title: "PrivChat Server",
@@ -489,7 +546,27 @@ export function ChatPage() {
           </div>
           <p>{t.capabilities.body}</p>
         </div>
-        <CapabilityGrid groups={t.capabilities.groups} icons={CAPABILITY_ICONS} />
+        <div className="capability-bands">
+          {t.capabilities.bands.map((band, i) => {
+            const range = CAPABILITY_BANDS[i];
+            return (
+              <div className={`capability-band capability-band-${range.tone}`} key={band.title}>
+                <div className="container capability-band-heading">
+                  <div>
+                    <span className="capability-source-badge">{band.badge}</span>
+                    <h3>{band.title}</h3>
+                  </div>
+                  <p>{band.body}</p>
+                </div>
+                <CapabilityGrid
+                  className={`capability-grid-band capability-grid-band-${range.tone}`}
+                  groups={t.capabilities.groups.slice(range.start, range.end)}
+                  icons={CAPABILITY_ICONS.slice(range.start, range.end)}
+                />
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       <section className="section">

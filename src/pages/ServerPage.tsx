@@ -126,7 +126,7 @@ const T = {
         },
         {
           title: "Privacy controls",
-          tags: ["Privacy settings", "Source verification", "Non-friend message control", "Blacklist", "IP protection"],
+          tags: ["Server-enforced privacy policy", "Source-aware access checks", "Persisted per-user controls", "IP protection"],
         },
         {
           title: "Data sovereignty",
@@ -233,7 +233,7 @@ const T = {
         },
         {
           title: "隐私管控",
-          tags: ["隐私设置", "来源验证", "非好友消息管控", "黑名单", "IP 防护"],
+          tags: ["服务端强制执行隐私策略", "来源感知访问检查", "用户级策略持久化", "IP 防护"],
         },
         {
           title: "数据主权",
@@ -340,7 +340,7 @@ const T = {
         },
         {
           title: "隱私管控",
-          tags: ["隱私設定", "來源驗證", "非好友訊息管控", "黑名單", "IP 防護"],
+          tags: ["伺服器端強制執行隱私策略", "來源感知存取檢查", "使用者級策略持久化", "IP 防護"],
         },
         {
           title: "資料主權",

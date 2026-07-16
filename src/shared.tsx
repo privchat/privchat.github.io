@@ -591,9 +591,17 @@ export function FeatureCard({ item }: { item: Feature }) {
 
 export type CapabilityGroup = { title: string; tags: string[] };
 
-export function CapabilityGrid({ groups, icons }: { groups: CapabilityGroup[]; icons: LucideIcon[] }) {
+export function CapabilityGrid({
+  groups,
+  icons,
+  className = "",
+}: {
+  groups: CapabilityGroup[];
+  icons: LucideIcon[];
+  className?: string;
+}) {
   return (
-    <div className="container feature-grid capability-grid">
+    <div className={`container feature-grid capability-grid ${className}`.trim()}>
       {groups.map((group, i) => {
         const Icon = icons[i];
         return (

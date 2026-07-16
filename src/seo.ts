@@ -61,17 +61,17 @@ export const SEO: Record<Route, Record<Lang, Meta>> = {
     en: {
       title: "Chat & Messaging — PrivChat",
       description:
-        "The complete PrivChat feature surface — messaging, groups, multi-device sync, read state, QR, personalization, and commercial extensions — plus three adoption paths from SDK integration to a white-label app.",
+        "A complete chat capability map across the open-source Server and SDKs, the commercial App family, and Platform extensions — with three adoption paths from integration to a white-label product.",
     },
     cn: {
       title: "聊天与消息 — PrivChat",
       description:
-        "PrivChat 完整功能面 — 消息、群组、多端同步、已读、二维码、个性化与商业扩展 — 以及从 SDK 集成到白标 App 的三条采用路径。",
+        "完整的聊天能力地图：开源 Server 与 SDK、商业 App 家族、Platform 扩展分层呈现，并提供从集成到白标产品的三条采用路径。",
     },
     tw: {
       title: "聊天與訊息 — PrivChat",
       description:
-        "PrivChat 完整功能面 — 訊息、群組、多裝置同步、已讀、QR Code、個人化與商業擴充 — 以及從 SDK 整合到白牌 App 的三條採用路徑。",
+        "完整的聊天能力地圖：開源 Server 與 SDK、商業 App 家族、Platform 擴充分層呈現，並提供從整合到白牌產品的三條採用路徑。",
     },
   },
   "/game/": {
