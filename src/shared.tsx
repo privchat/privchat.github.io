@@ -14,7 +14,6 @@ import {
   Lock,
   Menu,
   MessageSquare,
-  Network,
   Rocket,
   ShieldCheck,
   Terminal,
@@ -388,9 +387,15 @@ function isGroup(entry: NavEntry): entry is NavGroup {
 export function BrandMark() {
   return (
     <RoutedLink className="brand" href="/" ariaLabel="PrivChat homepage">
-      <span className="brand-mark" aria-hidden="true">
-        <Network size={19} strokeWidth={2.4} />
-      </span>
+      <img
+        className="brand-mark"
+        src="/assets/brand-icon-64.png"
+        srcSet="/assets/brand-icon-64.png 1x, /assets/brand-icon-128.png 2x"
+        alt=""
+        width={32}
+        height={32}
+        aria-hidden="true"
+      />
       <span>PrivChat</span>
     </RoutedLink>
   );

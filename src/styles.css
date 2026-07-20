@@ -133,15 +133,10 @@ h3 {
 }
 
 .brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 32px;
   height: 32px;
-  border-radius: 8px;
-  color: #fff;
-  background: var(--gradient);
-  box-shadow: 0 0 22px rgba(79, 124, 255, 0.45);
+  filter: drop-shadow(0 0 14px rgba(79, 124, 255, 0.45));
 }
 
 .nav-links {
