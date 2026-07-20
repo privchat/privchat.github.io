@@ -30,10 +30,10 @@ const SHOWCASE_HREFS = ["/chat/", "/game/", "/agents/"] as const;
 const T = {
   en: {
     hero: {
-      eyebrow: "Self-hosted realtime infrastructure",
-      title: "Build realtime apps, games, and agent channels",
-      accent: "on one protocol.",
-      lede: "PrivChat is an open-source, Rust-based realtime backbone — messaging, channel events, and typed transfer RPC over QUIC, TCP, and WebSocket. Run it on your own infrastructure.",
+      eyebrow: "Open source · Self-hosted · Rust",
+      title: "The fully open-source chat system",
+      accent: "and apps.",
+      lede: "A chat server built in production-grade Rust — messaging, groups, multi-device sync, and realtime push out of the box, with open web clients and SDKs for every stack. Clone it, deploy it: your data stays yours.",
       start: "Start building",
       arch: "View architecture",
     },
@@ -109,10 +109,10 @@ const T = {
   },
   cn: {
     hero: {
-      eyebrow: "自托管实时基础设施",
-      title: "在一套协议上构建实时应用、游戏与智能体通道",
-      accent: "",
-      lede: "PrivChat 是开源的 Rust 实时通信底座 — 消息、Channel 事件与强类型 transfer RPC，运行在 QUIC、TCP 与 WebSocket 之上。部署在你自己的基础设施上。",
+      eyebrow: "开源 · 自托管 · Rust",
+      title: "完全开源的聊天系统",
+      accent: "与 App。",
+      lede: "服务器以高质量 Rust 代码打造 — 消息、群组、多端同步与实时推送开箱即用，配开源 Web 客户端与全栈 SDK。克隆、部署，数据永远在你自己手里。",
       start: "开始构建",
       arch: "查看架构",
     },
@@ -188,10 +188,10 @@ const T = {
   },
   tw: {
     hero: {
-      eyebrow: "自託管即時基礎設施",
-      title: "在一套協議上構建即時應用、遊戲與AI 代理通道",
-      accent: "",
-      lede: "PrivChat 是開源的 Rust 即時通訊底座 — 訊息、Channel 事件與強型別 transfer RPC，執行在 QUIC、TCP 與 WebSocket 之上。部署在你自己的基礎設施上。",
+      eyebrow: "開源 · 自架 · Rust",
+      title: "完全開源的聊天系統",
+      accent: "與 App。",
+      lede: "伺服器以高品質 Rust 程式碼打造 — 訊息、群組、多裝置同步與即時推送開箱即用，配開源 Web 客戶端與全棧 SDK。克隆、部署，資料永遠在你自己手裡。",
       start: "開始構建",
       arch: "檢視架構",
     },

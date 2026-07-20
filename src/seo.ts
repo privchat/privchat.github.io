@@ -8,19 +8,19 @@ type Meta = { title: string; description: string };
 export const SEO: Record<Route, Record<Lang, Meta>> = {
   "/": {
     en: {
-      title: "PrivChat — Self-hosted realtime infrastructure for apps, games & AI agents",
+      title: "PrivChat — Fully open-source chat system & apps, built in Rust",
       description:
-        "Open-source Rust realtime backbone: messaging, channel events, and typed transfer RPC over QUIC, TCP, and WebSocket. Run it on your own infrastructure.",
+        "A production-grade chat server in high-quality Rust — fully open source, self-hosted. Messaging, groups, and multi-device sync, plus open web clients and SDKs; games and AI agents ride the same backbone.",
     },
     cn: {
-      title: "PrivChat — 面向应用、游戏与 AI 智能体的自托管实时基础设施",
+      title: "PrivChat — 完全开源的聊天系统与 App · 高质量 Rust 打造",
       description:
-        "开源 Rust 实时通信底座：消息、Channel 事件与强类型 transfer RPC，运行在 QUIC、TCP 与 WebSocket 之上，部署在你自己的基础设施上。",
+        "高质量 Rust 代码构建的聊天服务器，完全开源、自托管。消息、群组与多端同步开箱即用，配开源 Web 客户端与全语言 SDK；游戏与 AI 智能体共用同一底座。",
     },
     tw: {
-      title: "PrivChat — 面向應用、遊戲與 AI 代理的自架即時基礎設施",
+      title: "PrivChat — 完全開源的聊天系統與 App · 高品質 Rust 打造",
       description:
-        "開源 Rust 即時通訊底座：訊息、Channel 事件與強型別 transfer RPC，執行在 QUIC、TCP 與 WebSocket 之上，部署在你自己的基礎設施上。",
+        "高品質 Rust 程式碼構建的聊天伺服器，完全開源、自架。訊息、群組與多裝置同步開箱即用，配開源 Web 客戶端與全語言 SDK；遊戲與 AI 代理共用同一底座。",
     },
   },
   "/server/": {
