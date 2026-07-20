@@ -16,6 +16,7 @@ import {
   Server,
   Smartphone,
   UserPlus,
+  UserRoundCog,
   Users,
   Wallet,
 } from "lucide-react";
@@ -44,6 +45,7 @@ const CAPABILITY_ICONS = [
   KeyRound,
   FolderUp,
   BellRing,
+  UserRoundCog,
   QrCode,
   Palette,
   Wallet,
@@ -51,8 +53,8 @@ const CAPABILITY_ICONS = [
 
 const CAPABILITY_BANDS = [
   { start: 0, end: 9, tone: "open" },
-  { start: 9, end: 11, tone: "app" },
-  { start: 11, end: 12, tone: "platform" },
+  { start: 9, end: 12, tone: "app" },
+  { start: 12, end: 13, tone: "platform" },
 ] as const;
 
 const T = {
@@ -140,8 +142,8 @@ const T = {
           tags: ["Read receipts", "Unread counts", "Read lists & stats", "Online presence", "Typing (rate-limited)"],
         },
         {
-          title: "Account & devices",
-          tags: ["SMS code / password login", "Invite-code registration", "Multi-account switching", "QR login", "Device manage & kick", "Guided profile completion"],
+          title: "Auth & devices",
+          tags: ["Password login & JWT", "QR login", "Device manage & kick", "Multi-device sessions"],
         },
         {
           title: "Files & media",
@@ -150,6 +152,10 @@ const T = {
         {
           title: "Notifications & push",
           tags: ["Offline alerts", "Friend & group event notices", "System notifications", "Multi-vendor mobile delivery"],
+        },
+        {
+          title: "Account experience",
+          tags: ["SMS code login", "Invite-code registration", "Guided profile completion", "Multi-account switching"],
         },
         {
           title: "QR codes & sharing",
@@ -285,8 +291,8 @@ const T = {
           tags: ["已读回执", "未读计数", "已读列表与统计", "在线状态", "输入中（服务端限频）"],
         },
         {
-          title: "帐号与设备",
-          tags: ["短信验证码 / 账号密码", "邀请码注册", "多账号切换", "扫码登录", "设备管理与踢下线", "资料补全引导"],
+          title: "认证与设备",
+          tags: ["账号密码登录 + JWT", "扫码登录", "设备管理与踢下线", "多设备在线"],
         },
         {
           title: "文件与媒体",
@@ -295,6 +301,10 @@ const T = {
         {
           title: "通知与推送",
           tags: ["离线提醒", "好友/群事件通知", "系统通知", "多厂商移动推送"],
+        },
+        {
+          title: "帐号体验",
+          tags: ["短信验证码登录", "邀请码注册", "资料补全引导", "多账号切换"],
         },
         {
           title: "二维码与分享",
@@ -430,8 +440,8 @@ const T = {
           tags: ["已讀回執", "未讀計數", "已讀列表與統計", "在線狀態", "輸入中（伺服器端限頻）"],
         },
         {
-          title: "帳號與裝置",
-          tags: ["簡訊驗證碼 / 帳號密碼", "邀請碼註冊", "多帳號切換", "掃碼登入", "裝置管理與踢下線", "資料補全引導"],
+          title: "認證與裝置",
+          tags: ["帳號密碼登入 + JWT", "掃碼登入", "裝置管理與踢下線", "多裝置在線"],
         },
         {
           title: "檔案與媒體",
@@ -440,6 +450,10 @@ const T = {
         {
           title: "通知與推送",
           tags: ["離線提醒", "好友/群組事件通知", "系統通知", "多廠商行動推送"],
+        },
+        {
+          title: "帳號體驗",
+          tags: ["簡訊驗證碼登入", "邀請碼註冊", "資料補全引導", "多帳號切換"],
         },
         {
           title: "QR Code 與分享",
