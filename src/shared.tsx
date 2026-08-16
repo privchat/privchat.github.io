@@ -1016,19 +1016,19 @@ const contactCopy = {
   en: {
     eyebrow: "Get in touch",
     title: "Talk to the engineers who built it.",
-    body: "One address, no routing maze: developers and enterprise teams both reach the core engineering team at contact@privchat.dev — no marketing call, straight to architecture.",
+    body: "One address, no routing maze: developers and enterprise teams both reach the core engineering team at zoujiaqing@gmail.com — no marketing call, straight to architecture.",
     github: "GitHub discussions",
   },
   cn: {
     eyebrow: "联系我们",
     title: "直接和构建它的工程师对话。",
-    body: "一个入口，不用猜该找谁：开发者和企业团队都通过 contact@privchat.dev 直达核心工程团队 — 没有销售话术，直接聊架构。",
+    body: "一个入口，不用猜该找谁：开发者和企业团队都通过 zoujiaqing@gmail.com 直达核心工程团队 — 没有销售话术，直接聊架构。",
     github: "GitHub 讨论区",
   },
   tw: {
     eyebrow: "聯絡我們",
     title: "直接和打造它的工程師對話。",
-    body: "一個入口，不用猜該找誰：開發者和企業團隊都透過 contact@privchat.dev 直達核心工程團隊 — 沒有銷售話術，直接聊架構。",
+    body: "一個入口，不用猜該找誰：開發者和企業團隊都透過 zoujiaqing@gmail.com 直達核心工程團隊 — 沒有銷售話術，直接聊架構。",
     github: "GitHub 討論區",
   },
 };
@@ -1045,9 +1045,9 @@ export function ContactCta() {
           <p>{t.body}</p>
         </div>
         <div className="contact-card">
-          <a className="contact-row" href="mailto:contact@privchat.dev">
+          <a className="contact-row" href="mailto:zoujiaqing@gmail.com">
             <MessageSquare size={19} />
-            <span>contact@privchat.dev</span>
+            <span>zoujiaqing@gmail.com</span>
             <ArrowRight size={17} />
           </a>
           <a className="contact-row" href="https://github.com/privchat">

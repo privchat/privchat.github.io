@@ -193,17 +193,17 @@ export const SEO: Record<Route, Record<Lang, Meta>> = {
     en: {
       title: "Contact — PrivChat",
       description:
-        "Reach the core engineering team: contact@privchat.dev for business and licensing, GitHub for developers. Telegram, WeChat, and QQ channels are on the way.",
+        "Reach the core engineering team directly: email zoujiaqing@gmail.com, Telegram @zoujiaqing, WeChat zoujiaqing, QQ 101011100, or GitHub issues. No ticket queue, no sales script.",
     },
     cn: {
       title: "联系我们 — PrivChat",
       description:
-        "直达核心工程团队：商务与授权写信 contact@privchat.dev，开发者走 GitHub。Telegram、微信与 QQ 渠道即将开通。",
+        "直达核心工程团队：邮箱 zoujiaqing@gmail.com、Telegram @zoujiaqing、微信 zoujiaqing、QQ 101011100，或走 GitHub Issues。没有工单队列，也没有销售话术。",
     },
     tw: {
       title: "聯絡我們 — PrivChat",
       description:
-        "直達核心工程團隊：商務與授權寫信 contact@privchat.dev，開發者走 GitHub。Telegram、微信與 QQ 渠道即將開通。",
+        "直達核心工程團隊：信箱 zoujiaqing@gmail.com、Telegram @zoujiaqing、微信 zoujiaqing、QQ 101011100，或走 GitHub Issues。沒有工單佇列，也沒有銷售話術。",
     },
   },
   "/enterprise/": {

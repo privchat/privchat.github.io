@@ -647,8 +647,34 @@ h3 {
   font-size: 0.78rem;
 }
 
+.contact-handle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: start;
+  margin-top: 2px;
+  padding: 7px 13px;
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: var(--panel-strong);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.contact-handle:hover {
+  border-color: var(--accent-line);
+  color: #a5f3fc;
+}
+
 .channel-soon {
   opacity: 0.72;
+}
+
+.soon-single {
+  max-width: 420px;
 }
 
 .channel-soon h3 {

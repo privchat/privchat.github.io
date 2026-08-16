@@ -79,7 +79,7 @@ const T = {
     faq: {
       eyebrow: "Questions",
       title: "The honest answers, up front.",
-      body: "If your question is not here, ask it on GitHub or write to contact@privchat.dev — both routes reach engineers, not a sales script.",
+      body: "If your question is not here, ask it on GitHub or write to zoujiaqing@gmail.com — both routes reach engineers, not a sales script.",
       items: [
         {
           q: "Is the open-source version limited?",
@@ -163,7 +163,7 @@ const T = {
     faq: {
       eyebrow: "常见问题",
       title: "诚实的回答，先说在前面。",
-      body: "如果你的问题不在这里，去 GitHub 提问或写信到 contact@privchat.dev — 两条路都通向工程师，不是销售话术。",
+      body: "如果你的问题不在这里，去 GitHub 提问或写信到 zoujiaqing@gmail.com — 两条路都通向工程师，不是销售话术。",
       items: [
         {
           q: "开源版有功能限制吗？",
@@ -247,7 +247,7 @@ const T = {
     faq: {
       eyebrow: "常見問題",
       title: "誠實的回答，先說在前面。",
-      body: "如果你的問題不在這裡，去 GitHub 提問或寫信到 contact@privchat.dev — 兩條路都通向工程師，不是銷售話術。",
+      body: "如果你的問題不在這裡，去 GitHub 提問或寫信到 zoujiaqing@gmail.com — 兩條路都通向工程師，不是銷售話術。",
       items: [
         {
           q: "開源版有功能限制嗎？",
