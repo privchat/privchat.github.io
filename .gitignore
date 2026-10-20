@@ -4,3 +4,7 @@ dist-ssr/
 output/
 .DS_Store
 *.local
+
+# Local playwright scratch scripts (may contain test credentials)
+/_*.mjs
+/gate*.mjs
